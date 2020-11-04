@@ -1,22 +1,32 @@
 package be.technifutur.java2020.gestionStage.stage;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Scanner;
+
 
 public class ControleurStage {
 
-    public void addStage(List maListe, Stage monStage){
-        maListe.add(monStage);
+    public void addStage(List maListe, String name, LocalDateTime debut, LocalDateTime fin){
+        boolean doublon = false;
+        Stage monStage = new Stage(name, debut, fin);
+
+        for (int cpt = 0 ; cpt <= maListe.size() ; cpt++) {
+            if (maListe.contains(monStage)) {
+                System.out.println("Le stage existe déjà");
+                doublon = true;
+            }
+        }
+        if (doublon = false) {
+            maListe.add(monStage);
+            monStage.setDateDebut(debut);
+            monStage.setDateFin(fin);
+        }
     }
 
-    public void removeStage(List maListe) {
-        String stageName;
+    public void removeStage(List maListe, Stage monStage) {
         boolean presence = false;
-        System.out.println("Quel stage voulez-vous retirer ?");
-        Scanner sc = new Scanner(System.in);
-        stageName = sc.nextLine();
         for (int cpt = 0 ; cpt <= maListe.size() ; cpt++) {
-            if (maListe.get(cpt).equals(stageName)) {
+            if (maListe.get(cpt) == monStage) {
                 maListe.remove(cpt);
                 presence = true;
             }
