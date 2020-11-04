@@ -9,32 +9,35 @@ public class ControleurStage {
     public void addStage(List maListe, String name, LocalDateTime debut, LocalDateTime fin){
         boolean doublon = false;
         Stage monStage = new Stage(name, debut, fin);
-
-        for (int cpt = 0 ; cpt <= maListe.size() ; cpt++) {
             if (maListe.contains(monStage)) {
                 System.out.println("Le stage existe déjà");
-                doublon = true;
-            }
-        }
-        if (doublon = false) {
-            maListe.add(monStage);
-            monStage.setDateDebut(debut);
-            monStage.setDateFin(fin);
+            }else {
+                maListe.add(monStage);
+                monStage.setDateDebut(debut);
+                monStage.setDateFin(fin);
+                System.out.println("Le stage " + monStage.getNom() + " a bien été ajouté");
         }
     }
 
     public void removeStage(List maListe, Stage monStage) {
         boolean presence = false;
-        for (int cpt = 0 ; cpt <= maListe.size() ; cpt++) {
-            if (maListe.get(cpt) == monStage) {
-                maListe.remove(cpt);
-                presence = true;
-            }
+        if (maListe.contains(monStage)) {
+            presence = true;
+            maListe.remove(maListe.indexOf(monStage));
         }
         if (presence) {
-            System.out.println("Le Stage a bien été retiré");
+            System.out.println("Le Stage " + monStage.getNom() + " a bien été retiré");
         }else {
             System.out.println("Aucun stage correspondant");
+        }
+    }
+
+    public void remplaceStage(List maListe, Stage oldStage, Stage newStage) {
+        if (!maListe.contains(oldStage)) {
+            System.out.println("Le stage à remplacer n'existe pas");
+        }else {
+            maListe.set(maListe.indexOf(oldStage), newStage);
+            System.out.println("Le Stage " + oldStage.getNom() + " a bien été remplacé par le stage " + newStage.getNom());
         }
     }
 }
