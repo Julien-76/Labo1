@@ -6,7 +6,7 @@ import java.util.List;
 public class VueStage {
 
     public void AfficheListe(List maListe){
-        for (int cpt = 0; cpt <= maListe.size(); cpt++){
+        for (int cpt = 0; cpt < maListe.size(); cpt++){
             System.out.println(maListe.get(cpt));
         }
     }

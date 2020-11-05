@@ -24,11 +24,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="add ok, remove ok et remplace ok + découverte de IndexOf ok (pas encore testé">
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" afterDir="false" />
+    <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="controleur testé et faut régler quelques petits problèmes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ModeleStage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/VueStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/VueStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604500999084</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="controleur testé et faut régler quelques petits problèmes">
+      <created>1604507535111</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604507535111</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,35 +135,37 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ajout de src" />
     <MESSAGE value="+ mvc (pas encore testé)" />
     <MESSAGE value="add et remove du ctrl ok (pas testés)" />
     <MESSAGE value="add ok, remove ok et remplace ok + découverte de IndexOf ok (pas encore testé" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ok, remove ok et remplace ok + découverte de IndexOf ok (pas encore testé" />
+    <MESSAGE value="controleur testé et faut régler quelques petits problèmes" />
+    <option name="LAST_COMMIT_MESSAGE" value="controleur testé et faut régler quelques petits problèmes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1604494036951">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604494036951" />
-    <state width="1857" height="460" key="GridCell.Tab.0.bottom" timestamp="1604506507928">
+    <state width="1857" height="153" key="GridCell.Tab.0.bottom" timestamp="1604510241442">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="460" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604506507928" />
-    <state width="1857" height="460" key="GridCell.Tab.0.center" timestamp="1604506507928">
+    <state width="1857" height="153" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604510241442" />
+    <state width="1857" height="153" key="GridCell.Tab.0.center" timestamp="1604510241442">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="460" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604506507928" />
-    <state width="1857" height="460" key="GridCell.Tab.0.left" timestamp="1604506507927">
+    <state width="1857" height="153" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604510241442" />
+    <state width="1857" height="153" key="GridCell.Tab.0.left" timestamp="1604510241442">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="460" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604506507927" />
-    <state width="1857" height="460" key="GridCell.Tab.0.right" timestamp="1604506507928">
+    <state width="1857" height="153" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604510241442" />
+    <state width="1857" height="153" key="GridCell.Tab.0.right" timestamp="1604510241442">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="460" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604506507928" />
+    <state width="1857" height="153" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604510241442" />
     <state x="606" y="238" key="run.anything.popup" timestamp="1604489222652">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
