@@ -1,13 +1,16 @@
 package be.technifutur.java2020.gestionStage.stage;
 
+import java.util.HashMap;
 import java.util.List;
 
 
 public class VueStage {
 
-    public void AfficheListe(List maListe){
-        for (int cpt = 0; cpt < maListe.size(); cpt++){
-            System.out.println(maListe.get(cpt));
-        }
+    public void AfficheListe(HashMap maListe){
+        System.out.println(maListe.keySet().toString());
+    }
+
+    public void afficheMenu(){
+        System.out.println("Que veux-tu faire ? \n1. Ajouter Stage\n2. Retirer Stage\n3. Remplacer Stage\n4. Afficher la liste");
     }
 }

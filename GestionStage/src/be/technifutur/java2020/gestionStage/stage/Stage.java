@@ -2,19 +2,19 @@ package be.technifutur.java2020.gestionStage.stage;
 import java.time.LocalDateTime;
 
 public class Stage {
-    private String nom;
+    private String key;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
 
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
-        this.nom = nom;
+        this.key = nom;
         this.dateDebut = debut;
         this.dateFin = fin;
     }
 
-    public String getNom() {
-        return nom;
+    public String getKey() {
+        return key;
     }
 
     public LocalDateTime getDateDebut() {
@@ -25,8 +25,8 @@ public class Stage {
         return dateFin;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setKey(String nom) {
+        this.key = nom;
     }
 
     public void setDateDebut(LocalDateTime dateDebut) {
