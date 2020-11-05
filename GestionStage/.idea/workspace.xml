@@ -25,13 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="travail sur la date">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/Activite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/VueActivite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/VueStage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/VueStage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/VueStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/VueStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,7 @@
       <module name="GestionStage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.stage.*" />
+          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.activite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -80,7 +81,7 @@
       <module name="GestionStage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.stage.*" />
+          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.activite.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -187,10 +188,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="travail sur la date" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1604494036951">
+    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1604591690972">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604494036951" />
+    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604591690972" />
     <state width="1857" height="556" key="GridCell.Tab.0.bottom" timestamp="1604586190374">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>

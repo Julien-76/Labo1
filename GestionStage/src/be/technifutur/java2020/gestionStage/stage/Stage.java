@@ -1,11 +1,15 @@
 package be.technifutur.java2020.gestionStage.stage;
+import be.technifutur.java2020.gestionStage.activite.Activite;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
 public class Stage {
-    private String nom, debut, fin;
+    private String nom, txtDebut, txtFin;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
+    private HashMap<String, Activite> activite;
 
     public static void main(String[] args) {
         LocalDateTime a = LocalDateTime.of(2020,05,12,16,00);
@@ -15,22 +19,22 @@ public class Stage {
     }
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
-        if (debut.compareTo(fin) > 0) {
-            System.out.println("Date de fin antérieur à celle du début...");
-        } else {
             this.nom = nom;
             this.dateDebut = debut;
             this.dateFin = fin;
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
             String nDebut = debut.format(formatter);
             String nFIn = fin.format(formatter);
-            this.debut = nDebut;
-            this.fin = nFIn;
-        }
+            this.txtDebut = nDebut;
+            this.txtFin = nFIn;
     }
 
     public String getNom() {
         return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
     }
 
     public LocalDateTime getDateDebut() {
@@ -41,15 +45,19 @@ public class Stage {
         return dateFin;
     }
 
-    public void setKey(String nom) {
-        this.nom = nom;
-    }
-
     public void setDateDebut(LocalDateTime dateDebut) {
         this.dateDebut = dateDebut;
     }
 
     public void setDateFin(LocalDateTime dateFin) {
         this.dateFin = dateFin;
+    }
+
+    public String getTxtDebut() {
+        return txtDebut;
+    }
+
+    public String getTxtFin() {
+        return txtFin;
     }
 }

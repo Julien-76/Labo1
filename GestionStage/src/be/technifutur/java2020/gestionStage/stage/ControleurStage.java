@@ -1,10 +1,7 @@
 package be.technifutur.java2020.gestionStage.stage;
 
-import java.sql.SQLOutput;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 
@@ -37,6 +34,16 @@ public class ControleurStage {
         }
     }
 
+    public boolean isDateValid(LocalDateTime debut, LocalDateTime fin) {
+        boolean ok = false;
+        if (debut.compareTo(fin) > 0 || debut.isBefore(LocalDateTime.now())) {
+            System.out.println("Date invalide");
+        } else {
+            ok = true;
+        }
+        return ok;
+    }
+
     public Stage createStage() {
         System.out.println("Quel nom de stage ?");
         Scanner sc = new Scanner(System.in);
@@ -48,8 +55,8 @@ public class ControleurStage {
             int jourDebut = sc.nextInt();
             System.out.println("Mois début ?");
             int moisDebut = sc.nextInt();
-            System.out.println("Année début ?");
-            int anneeDebut = sc.nextInt();
+            System.out.println("Année début ?");        //Je sais c'est moche, je vais m'en occuper
+            int anneeDebut = sc.nextInt();              //TODO saisir sur une seule ligne
             System.out.println("Heure début?");
             int heureDebut = sc.nextInt();
             System.out.println("Minutes début?");
@@ -67,17 +74,15 @@ public class ControleurStage {
             System.out.println("Minutes fin?");
             int minutesFin = sc.nextInt();
             dateFin = LocalDateTime.of(anneeFin, moisFin, jourFin, heureFin, minutesFin);
-            if (dateDebut.compareTo(dateFin) > 0) {
-                System.out.println("Date de fin antérieur à celle du début...");
-            }
-        }while (dateDebut.compareTo(dateFin) > 0);
+            this.isDateValid(dateDebut, dateFin);
+        }while (!this.isDateValid(dateDebut, dateFin));
 
         Stage newStage = new Stage(addNom, dateDebut, dateFin);
         return newStage;
     }
 
-    public static void main(String[] args) {
-        int choix = 1;
+    public static void main(String[] args) {        // manipulation de la liste ok
+        int choix = 0;
         ControleurStage control = new ControleurStage();
         ListeStage maliste = new ListeStage();
         maliste.listeStage = new HashMap<>();
