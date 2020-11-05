@@ -24,7 +24,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="résolution de quelques problèmes">
+    <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="ça fonctionne ENFIN. Manipulation de la liste et affichage ok">
       <change afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -154,29 +154,30 @@
     <MESSAGE value="add ok, remove ok et remplace ok + découverte de IndexOf ok (pas encore testé" />
     <MESSAGE value="controleur testé et faut régler quelques petits problèmes" />
     <MESSAGE value="résolution de quelques problèmes" />
-    <option name="LAST_COMMIT_MESSAGE" value="résolution de quelques problèmes" />
+    <MESSAGE value="ça fonctionne ENFIN. Manipulation de la liste et affichage ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="ça fonctionne ENFIN. Manipulation de la liste et affichage ok" />
   </component>
   <component name="WindowStateProjectService">
     <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1604494036951">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604494036951" />
-    <state width="1857" height="631" key="GridCell.Tab.0.bottom" timestamp="1604573998855">
+    <state width="1857" height="631" key="GridCell.Tab.0.bottom" timestamp="1604574057742">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="631" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604573998855" />
-    <state width="1857" height="631" key="GridCell.Tab.0.center" timestamp="1604573998855">
+    <state width="1857" height="631" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604574057742" />
+    <state width="1857" height="631" key="GridCell.Tab.0.center" timestamp="1604574057742">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="631" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604573998855" />
-    <state width="1857" height="631" key="GridCell.Tab.0.left" timestamp="1604573998854">
+    <state width="1857" height="631" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604574057742" />
+    <state width="1857" height="631" key="GridCell.Tab.0.left" timestamp="1604574057741">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="631" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604573998854" />
-    <state width="1857" height="631" key="GridCell.Tab.0.right" timestamp="1604573998855">
+    <state width="1857" height="631" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604574057741" />
+    <state width="1857" height="631" key="GridCell.Tab.0.right" timestamp="1604574057742">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="631" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604573998855" />
+    <state width="1857" height="631" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604574057742" />
     <state x="606" y="238" key="run.anything.popup" timestamp="1604489222652">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
