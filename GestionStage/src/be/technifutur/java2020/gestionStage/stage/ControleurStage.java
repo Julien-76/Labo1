@@ -28,19 +28,6 @@ public class ControleurStage {
         }
     }
 
-   /* public void removeStage(ListeStage maMap, String stageKey, Stage monStage) {
-        boolean presence = false;
-        if (!maMap.listeStage.containsKey(stageKey)) {
-            presence = true;
-            maMap.listeStage.remove(monStage);
-        }
-        if (presence) {
-            System.out.println("Le Stage " + monStage.getKey() + " a bien été retiré");
-        }else {
-            System.out.println("Aucun stage correspondant");
-        }
-    }
-*/
     public void remplaceStage(ListeStage maMap, String oldKey, String newKey, Stage newStage) {
         if (!maMap.listeStage.containsKey(oldKey)) {
             System.out.println("Le stage à remplacer n'existe pas");
@@ -54,29 +41,37 @@ public class ControleurStage {
         System.out.println("Quel nom de stage ?");
         Scanner sc = new Scanner(System.in);
         String addNom = sc.nextLine();
-        System.out.println("Jour début ?");
-        int jourDebut = sc.nextInt();
-        System.out.println("Mois début ?");
-        int moisDebut = sc.nextInt();
-        System.out.println("Année début ?");
-        int anneeDebut = sc.nextInt();
-        System.out.println("Heure début?");
-        int heureDebut = sc.nextInt();
-        System.out.println("Minutes début?");
-        int minutesDebut = sc.nextInt();
-        LocalDateTime dateDebut = LocalDateTime.of(anneeDebut, moisDebut, jourDebut, heureDebut, minutesDebut);
+        LocalDateTime dateDebut = null;
+        LocalDateTime dateFin = null;
+        do {
+            System.out.println("Jour début ?");
+            int jourDebut = sc.nextInt();
+            System.out.println("Mois début ?");
+            int moisDebut = sc.nextInt();
+            System.out.println("Année début ?");
+            int anneeDebut = sc.nextInt();
+            System.out.println("Heure début?");
+            int heureDebut = sc.nextInt();
+            System.out.println("Minutes début?");
+            int minutesDebut = sc.nextInt();
+            dateDebut = LocalDateTime.of(anneeDebut, moisDebut, jourDebut, heureDebut, minutesDebut);
 
-        System.out.println("Jour fin ?");
-        int jourFin = sc.nextInt();
-        System.out.println("Mois fin ?");
-        int moisFin = sc.nextInt();
-        System.out.println("Année fin ?");
-        int anneeFin = sc.nextInt();
-        System.out.println("Heure fin?");
-        int heureFin = sc.nextInt();
-        System.out.println("Minutes fin?");
-        int minutesFin = sc.nextInt();
-        LocalDateTime dateFin = LocalDateTime.of(anneeFin, moisFin, jourFin, heureFin, minutesFin);
+            System.out.println("Jour fin ?");
+            int jourFin = sc.nextInt();
+            System.out.println("Mois fin ?");
+            int moisFin = sc.nextInt();
+            System.out.println("Année fin ?");
+            int anneeFin = sc.nextInt();
+            System.out.println("Heure fin?");
+            int heureFin = sc.nextInt();
+            System.out.println("Minutes fin?");
+            int minutesFin = sc.nextInt();
+            dateFin = LocalDateTime.of(anneeFin, moisFin, jourFin, heureFin, minutesFin);
+            if (dateDebut.compareTo(dateFin) > 0) {
+                System.out.println("Date de fin antérieur à celle du début...");
+            }
+        }while (dateDebut.compareTo(dateFin) > 0);
+
         Stage newStage = new Stage(addNom, dateDebut, dateFin);
         return newStage;
     }
@@ -93,13 +88,13 @@ public class ControleurStage {
             choix = sc.nextInt();
             if (choix == 1) {
                 Stage stageAdd = control.createStage();
-                control.addStage(maliste, stageAdd.getKey(), stageAdd);
+                control.addStage(maliste, stageAdd.getNom(), stageAdd);
             }
             if (choix == 2) {
                 System.out.println("Quel stage supprimer ?");
                 Scanner sc3 = new Scanner(System.in);
                 String remStage = sc3.nextLine();
-                control.removeStage(maliste, remStage/*, maliste.listeStage.get(remStage)*/);
+                control.removeStage(maliste, remStage);
             }
             if (choix == 3) {
 
@@ -108,7 +103,7 @@ public class ControleurStage {
                 String rempStage = sc4.nextLine();
                 System.out.println("Entre les coordonnées du nouveau Stage :");
                 Stage stageAdd = control.createStage();
-                control.remplaceStage(maliste, rempStage, stageAdd.getKey(), stageAdd);
+                control.remplaceStage(maliste, rempStage, stageAdd.getNom(), stageAdd);
             }
             if (choix == 4) {
                 vue.AfficheListe(maliste.listeStage);

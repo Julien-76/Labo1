@@ -2,6 +2,7 @@ package be.technifutur.java2020.gestionStage.stage;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 public class VueStage {

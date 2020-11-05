@@ -3,26 +3,34 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Stage {
-    private String key;
+    private String nom, debut, fin;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
 
     public static void main(String[] args) {
-        LocalDateTime baba = LocalDateTime.of(2020,05,12,16,00);
-        System.out.println(baba);
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-        String nouvelleDate = baba.format(formatter);
-        System.out.println(nouvelleDate);
+        LocalDateTime a = LocalDateTime.of(2020,05,12,16,00);
+        LocalDateTime b = LocalDateTime.of(2020,05,12,16,01);
+        int c = a.compareTo(b);
+        System.out.println(c);
     }
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
-        this.key = nom;
-        this.dateDebut = debut;
-        this.dateFin = fin;
+        if (debut.compareTo(fin) > 0) {
+            System.out.println("Date de fin antérieur à celle du début...");
+        } else {
+            this.nom = nom;
+            this.dateDebut = debut;
+            this.dateFin = fin;
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+            String nDebut = debut.format(formatter);
+            String nFIn = fin.format(formatter);
+            this.debut = nDebut;
+            this.fin = nFIn;
+        }
     }
 
-    public String getKey() {
-        return key;
+    public String getNom() {
+        return nom;
     }
 
     public LocalDateTime getDateDebut() {
@@ -34,7 +42,7 @@ public class Stage {
     }
 
     public void setKey(String nom) {
-        this.key = nom;
+        this.nom = nom;
     }
 
     public void setDateDebut(LocalDateTime dateDebut) {
