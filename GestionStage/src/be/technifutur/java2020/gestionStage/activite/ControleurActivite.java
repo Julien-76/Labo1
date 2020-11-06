@@ -20,12 +20,22 @@ public class ControleurActivite {
         }
     }
 
-    public void removeActivité() {      //TODO, se baser sur Stage
-
+    public void removeActivité(Stage monStage, String activiteKey) {
+        if (!monStage.getListeActivite().containsKey(activiteKey)) {
+            System.out.println("Aucune activité correspondante");
+        }else {
+            monStage.getListeActivite().remove(activiteKey);
+            System.out.println("L'activité' " + activiteKey + " a bien été retirée");
+        }
     }
 
-    public void replaceActivite() {     //TODO, se baser sur Stage
-
+    public void remplaceActivite(Stage monStage, String oldKey, String newKey, Activite newActivite) {
+        if (!monStage.getListeActivite().containsKey(oldKey)) {
+            System.out.println("Le stage à remplacer n'existe pas");
+        } else {
+            this.removeActivité(monStage, oldKey);
+            this.addActivite(monStage, newKey, newActivite);
+        }
     }
 
     public void createActivite() {      //TODO, se baser sur Stage

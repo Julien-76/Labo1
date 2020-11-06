@@ -26,12 +26,9 @@
   <component name="ChangeListManager">
     <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="réécriture date pattern et affichage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/ControleurActivite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/ControleurActivite.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,22 +210,22 @@
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604656085024" />
-    <state width="1857" height="317" key="GridCell.Tab.0.bottom" timestamp="1604657595741">
+    <state width="1857" height="317" key="GridCell.Tab.0.bottom" timestamp="1604659142323">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="317" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
-    <state width="1857" height="317" key="GridCell.Tab.0.center" timestamp="1604657595741">
+    <state width="1857" height="317" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604659142323" />
+    <state width="1857" height="317" key="GridCell.Tab.0.center" timestamp="1604659142322">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="317" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
-    <state width="1857" height="317" key="GridCell.Tab.0.left" timestamp="1604657595741">
+    <state width="1857" height="317" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604659142322" />
+    <state width="1857" height="317" key="GridCell.Tab.0.left" timestamp="1604659142322">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="317" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
-    <state width="1857" height="317" key="GridCell.Tab.0.right" timestamp="1604657595741">
+    <state width="1857" height="317" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604659142322" />
+    <state width="1857" height="317" key="GridCell.Tab.0.right" timestamp="1604659142323">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="317" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
+    <state width="1857" height="317" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604659142323" />
     <state width="1857" height="343" key="GridCell.Tab.1.bottom" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
