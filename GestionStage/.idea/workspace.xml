@@ -25,14 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="travail sur la date">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/Activite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/VueActivite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +57,20 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.ControleurStage">
+  <component name="RunManager" selected="Application.ControleurActivite">
+    <configuration name="ControleurActivite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.activite.ControleurActivite" />
+      <module name="GestionStage" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.activite.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ControleurStage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.stage.ControleurStage" />
       <module name="GestionStage" />
@@ -91,6 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ControleurActivite" />
         <item itemvalue="Application.ControleurStage" />
         <item itemvalue="Application.Stage" />
       </list>
@@ -192,42 +201,42 @@
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604591690972" />
-    <state width="1857" height="556" key="GridCell.Tab.0.bottom" timestamp="1604586190374">
+    <state width="1857" height="343" key="GridCell.Tab.0.bottom" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="556" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604586190374" />
-    <state width="1857" height="556" key="GridCell.Tab.0.center" timestamp="1604586190373">
+    <state width="1857" height="343" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
+    <state width="1857" height="343" key="GridCell.Tab.0.center" timestamp="1604593053096">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="556" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604586190373" />
-    <state width="1857" height="556" key="GridCell.Tab.0.left" timestamp="1604586190373">
+    <state width="1857" height="343" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053096" />
+    <state width="1857" height="343" key="GridCell.Tab.0.left" timestamp="1604593053096">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="556" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604586190373" />
-    <state width="1857" height="556" key="GridCell.Tab.0.right" timestamp="1604586190374">
+    <state width="1857" height="343" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053096" />
+    <state width="1857" height="343" key="GridCell.Tab.0.right" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="556" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604586190374" />
-    <state width="1857" height="343" key="GridCell.Tab.1.bottom" timestamp="1604584881810">
+    <state width="1857" height="343" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
+    <state width="1857" height="343" key="GridCell.Tab.1.bottom" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.1.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604584881810" />
-    <state width="1857" height="343" key="GridCell.Tab.1.center" timestamp="1604584881810">
+    <state width="1857" height="343" key="GridCell.Tab.1.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
+    <state width="1857" height="343" key="GridCell.Tab.1.center" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.1.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604584881810" />
-    <state width="1857" height="343" key="GridCell.Tab.1.left" timestamp="1604584881810">
+    <state width="1857" height="343" key="GridCell.Tab.1.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
+    <state width="1857" height="343" key="GridCell.Tab.1.left" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.1.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604584881810" />
-    <state width="1857" height="343" key="GridCell.Tab.1.right" timestamp="1604584881810">
+    <state width="1857" height="343" key="GridCell.Tab.1.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
+    <state width="1857" height="343" key="GridCell.Tab.1.right" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.1.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604584881810" />
-    <state x="606" y="238" key="run.anything.popup" timestamp="1604489222652">
+    <state width="1857" height="343" key="GridCell.Tab.1.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
+    <state x="606" y="238" key="run.anything.popup" timestamp="1604653329635">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state x="606" y="238" key="run.anything.popup/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604489222652" />
+    <state x="606" y="238" key="run.anything.popup/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604653329635" />
   </component>
   <component name="masterDetails">
     <states>

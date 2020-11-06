@@ -1,8 +1,11 @@
 package be.technifutur.java2020.gestionStage.stage;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class ControleurStage {
@@ -51,34 +54,32 @@ public class ControleurStage {
         LocalDateTime dateDebut = null;
         LocalDateTime dateFin = null;
         do {
-            System.out.println("Jour début ?");
-            int jourDebut = sc.nextInt();
-            System.out.println("Mois début ?");
-            int moisDebut = sc.nextInt();
-            System.out.println("Année début ?");        //Je sais c'est moche, je vais m'en occuper
-            int anneeDebut = sc.nextInt();              //TODO saisir sur une seule ligne
-            System.out.println("Heure début?");
-            int heureDebut = sc.nextInt();
-            System.out.println("Minutes début?");
-            int minutesDebut = sc.nextInt();
-            dateDebut = LocalDateTime.of(anneeDebut, moisDebut, jourDebut, heureDebut, minutesDebut);
-
-            System.out.println("Jour fin ?");
-            int jourFin = sc.nextInt();
-            System.out.println("Mois fin ?");
-            int moisFin = sc.nextInt();
-            System.out.println("Année fin ?");
-            int anneeFin = sc.nextInt();
-            System.out.println("Heure fin?");
-            int heureFin = sc.nextInt();
-            System.out.println("Minutes fin?");
-            int minutesFin = sc.nextInt();
-            dateFin = LocalDateTime.of(anneeFin, moisFin, jourFin, heureFin, minutesFin);
+            System.out.println("Date de début ?");
+            dateDebut = this.saisieDate();
+            System.out.println("Date de fin ?");
+            dateFin = this.saisieDate();
             this.isDateValid(dateDebut, dateFin);
         }while (!this.isDateValid(dateDebut, dateFin));
 
         Stage newStage = new Stage(addNom, dateDebut, dateFin);
         return newStage;
+    }
+
+    public LocalDateTime saisieDate(){
+        String formatDate = "dd/MM/yyyy HH:mm";
+        DateTimeFormatter format = DateTimeFormatter.ofPattern(formatDate);
+        String date = new Scanner(System.in).nextLine();
+        Pattern pat = Pattern.compile("(0[1-9]|[1-2][0-9]|[0-1])/(0[1-9]|1[0-2])/([0-9][0-9][0-9][0-9]) ([0-1][0-9]|2[0-3]):([0-5][0-9])");
+        Matcher match = pat.matcher(date);
+        boolean valid = match.matches();
+        while (!valid) {
+            System.out.println("Date non valide");
+            date = new Scanner(System.in).nextLine();
+            match = pat.matcher(date);
+            valid = match.matches();
+        }
+        LocalDateTime maDate = LocalDateTime.parse(date, format);
+        return maDate;
     }
 
     public static void main(String[] args) {        // manipulation de la liste ok
