@@ -1,7 +1,9 @@
 package be.technifutur.java2020.gestionStage.stage;
 
 import be.technifutur.java2020.gestionStage.AbstractControleur;
+import be.technifutur.java2020.gestionStage.activite.Activite;
 
+import javax.accessibility.AccessibleTable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -52,8 +54,8 @@ public class ControleurStage extends AbstractControleur {
             dateFin = this.saisieDate();
             this.isDateValid(dateDebut, dateFin);
         }while (!this.isDateValid(dateDebut, dateFin));
-
-        Stage newStage = new Stage(addNom, dateDebut, dateFin);
+        HashMap<String, Activite> maliste = null;
+        Stage newStage = new Stage(addNom, dateDebut, dateFin, maliste);
         return newStage;
     }
 

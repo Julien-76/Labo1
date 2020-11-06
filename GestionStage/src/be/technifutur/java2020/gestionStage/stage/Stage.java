@@ -18,7 +18,7 @@ public class Stage {
         System.out.println(c);
     }
 
-    public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
+    public Stage (String nom, LocalDateTime debut, LocalDateTime fin, HashMap<String, Activite> listeActivite) {
             this.nom = nom;
             this.dateDebut = debut;
             this.dateFin = fin;
@@ -27,6 +27,7 @@ public class Stage {
             String nFIn = fin.format(formatter);
             this.txtDebut = nDebut;
             this.txtFin = nFIn;
+            this.listeActivite = listeActivite;
     }
 
     public String getNom() {
