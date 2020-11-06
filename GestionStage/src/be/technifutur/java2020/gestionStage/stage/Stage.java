@@ -9,7 +9,7 @@ public class Stage {
     private String nom, txtDebut, txtFin;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
-    private HashMap<String, Activite> activite;
+    private HashMap<String, Activite> listeActivite;
 
     public static void main(String[] args) {
         LocalDateTime a = LocalDateTime.of(2020,05,12,16,00);
@@ -59,5 +59,9 @@ public class Stage {
 
     public String getTxtFin() {
         return txtFin;
+    }
+
+    public HashMap<String, Activite> getListeActivite() {
+        return listeActivite;
     }
 }

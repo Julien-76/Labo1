@@ -24,10 +24,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="travail sur la date">
+    <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="réécriture date pattern et affichage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/ControleurActivite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/ControleurActivite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/ControleurActivite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +61,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Application.ControleurActivite">
+  <component name="RunManager" selected="Application.ControleurStage">
     <configuration name="ControleurActivite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.activite.ControleurActivite" />
       <module name="GestionStage" />
@@ -99,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ControleurActivite" />
         <item itemvalue="Application.ControleurStage" />
+        <item itemvalue="Application.ControleurActivite" />
         <item itemvalue="Application.Stage" />
       </list>
     </recent_temporary>
@@ -170,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604580972391</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="réécriture date pattern et affichage">
+      <created>1604654439192</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604654439192</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,29 +205,30 @@
     <MESSAGE value="résolution de quelques problèmes" />
     <MESSAGE value="ça fonctionne ENFIN. Manipulation de la liste et affichage ok" />
     <MESSAGE value="travail sur la date" />
-    <option name="LAST_COMMIT_MESSAGE" value="travail sur la date" />
+    <MESSAGE value="réécriture date pattern et affichage" />
+    <option name="LAST_COMMIT_MESSAGE" value="réécriture date pattern et affichage" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1604591690972">
+    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1604656085024">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604591690972" />
-    <state width="1857" height="343" key="GridCell.Tab.0.bottom" timestamp="1604593053097">
+    <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604656085024" />
+    <state width="1857" height="317" key="GridCell.Tab.0.bottom" timestamp="1604657595741">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
-    <state width="1857" height="343" key="GridCell.Tab.0.center" timestamp="1604593053096">
+    <state width="1857" height="317" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
+    <state width="1857" height="317" key="GridCell.Tab.0.center" timestamp="1604657595741">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053096" />
-    <state width="1857" height="343" key="GridCell.Tab.0.left" timestamp="1604593053096">
+    <state width="1857" height="317" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
+    <state width="1857" height="317" key="GridCell.Tab.0.left" timestamp="1604657595741">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053096" />
-    <state width="1857" height="343" key="GridCell.Tab.0.right" timestamp="1604593053097">
+    <state width="1857" height="317" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
+    <state width="1857" height="317" key="GridCell.Tab.0.right" timestamp="1604657595741">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
-    <state width="1857" height="343" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604593053097" />
+    <state width="1857" height="317" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1604657595741" />
     <state width="1857" height="343" key="GridCell.Tab.1.bottom" timestamp="1604593053097">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
