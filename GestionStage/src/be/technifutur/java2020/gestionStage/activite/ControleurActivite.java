@@ -1,4 +1,5 @@
 package be.technifutur.java2020.gestionStage.activite;
+import be.technifutur.java2020.gestionStage.AbstractControleur;
 import be.technifutur.java2020.gestionStage.stage.Stage;
 
 
@@ -9,7 +10,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class ControleurActivite {
+public class ControleurActivite extends AbstractControleur {
 
     public void addActivite(Stage monStage, String name, Activite monActivite) {     //TODO, se baser sur Stage
         if (monStage.getListeActivite().containsKey(name)) {
@@ -38,8 +39,22 @@ public class ControleurActivite {
         }
     }
 
-    public void createActivite() {      //TODO, se baser sur Stage
-
+    public Activite createActivite() {      //TODO, se baser sur Stage
+        System.out.println("Qelle activité créer ?");
+        Scanner sc = new Scanner(System.in);
+        String addNom = sc.nextLine();
+        LocalDateTime dateDebut = null;
+        do {
+            System.out.println("Date de début ?");
+            dateDebut = this.saisieDate();
+            if (dateDebut.isBefore(LocalDateTime.now())) {
+                System.out.println("Date antérieure au présent... recommence");
+            }
+        }while (dateDebut.isBefore(LocalDateTime.now()));
+        System.out.println("Combien de temps va durer l'activité ? (en minutes) ");
+        int duree = sc.nextInt();
+        Activite newActivite = new Activite(addNom, dateDebut, duree);
+        return newActivite;
     }
 
     public static void main(String[] args) {

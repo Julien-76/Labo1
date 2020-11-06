@@ -1,5 +1,7 @@
 package be.technifutur.java2020.gestionStage.stage;
 
+import be.technifutur.java2020.gestionStage.AbstractControleur;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -8,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class ControleurStage {
+public class ControleurStage extends AbstractControleur {
 
     public void addStage(ListeStage maMap, String name, Stage monStage){
             if (maMap.listeStage.containsKey(name)) {
@@ -37,16 +39,6 @@ public class ControleurStage {
         }
     }
 
-    public boolean isDateValid(LocalDateTime debut, LocalDateTime fin) {
-        boolean ok = false;
-        if (debut.compareTo(fin) > 0 || debut.isBefore(LocalDateTime.now())) {
-            System.out.println("Date invalide (antérieur au début ou au présent");
-        } else {
-            ok = true;
-        }
-        return ok;
-    }
-
     public Stage createStage() {
         System.out.println("Quel nom de stage ?");
         Scanner sc = new Scanner(System.in);
@@ -65,22 +57,7 @@ public class ControleurStage {
         return newStage;
     }
 
-    public LocalDateTime saisieDate(){
-        String formatDate = "dd/MM/yyyy HH:mm";
-        DateTimeFormatter format = DateTimeFormatter.ofPattern(formatDate);
-        String date = new Scanner(System.in).nextLine();
-        Pattern pat = Pattern.compile("(0[1-9]|[1-2][0-9]|3[0-1])/(0[1-9]|1[0-2])/([0-9][0-9][0-9][0-9]) ([0-1][0-9]|2[0-3]):([0-5][0-9])");
-        Matcher match = pat.matcher(date);
-        boolean valid = match.matches();
-        while (!valid) {
-            System.out.println("Date non valide, recommence");
-            date = new Scanner(System.in).nextLine();
-            match = pat.matcher(date);
-            valid = match.matches();
-        }
-        LocalDateTime maDate = LocalDateTime.parse(date, format);
-        return maDate;
-    }
+
 
     public static void main(String[] args) {        // manipulation de la liste ok
         int choix = 0;
