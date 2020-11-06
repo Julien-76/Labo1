@@ -6,10 +6,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
 public class Stage {
+
     private String nom, txtDebut, txtFin;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
-    private HashMap<String, Activite> listeActivite;
+    public HashMap<String, Activite> listeActivite; //bug introuvable si private
 
     public static void main(String[] args) {
         LocalDateTime a = LocalDateTime.of(2020,05,12,16,00);
@@ -18,7 +19,7 @@ public class Stage {
         System.out.println(c);
     }
 
-    public Stage (String nom, LocalDateTime debut, LocalDateTime fin, HashMap<String, Activite> listeActivite) {
+    public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
             this.nom = nom;
             this.dateDebut = debut;
             this.dateFin = fin;
@@ -27,7 +28,6 @@ public class Stage {
             String nFIn = fin.format(formatter);
             this.txtDebut = nDebut;
             this.txtFin = nFIn;
-            this.listeActivite = listeActivite;
     }
 
     public String getNom() {

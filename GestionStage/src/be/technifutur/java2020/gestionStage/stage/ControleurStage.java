@@ -55,7 +55,7 @@ public class ControleurStage extends AbstractControleur {
             this.isDateValid(dateDebut, dateFin);
         }while (!this.isDateValid(dateDebut, dateFin));
         HashMap<String, Activite> maliste = null;
-        Stage newStage = new Stage(addNom, dateDebut, dateFin, maliste);
+        Stage newStage = new Stage(addNom, dateDebut, dateFin);
         return newStage;
     }
 

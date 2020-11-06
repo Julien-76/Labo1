@@ -30,7 +30,7 @@ public class ControleurActivite extends AbstractControleur {
             System.out.println("Aucune activité correspondante");
         }else {
             monStage.getListeActivite().remove(activiteKey);
-            System.out.println("L'activité' " + activiteKey + " a bien été retirée");
+            System.out.println("L'activité " + activiteKey + " a bien été retirée");
         }
     }
 
@@ -64,8 +64,8 @@ public class ControleurActivite extends AbstractControleur {
     public static void main(String[] args) {
         int choix = 0;
         ControleurActivite control = new ControleurActivite();
-        HashMap<String, Activite> maliste = null;
-        Stage monStage = new Stage("Tennis", LocalDateTime.of(2020,12,01,8,00), LocalDateTime.of(2020,12,31,17,00), maliste);
+        Stage monStage = new Stage("Tennis", LocalDateTime.of(2020,12,01,8,00), LocalDateTime.of(2020,12,31,17,00));
+        monStage.listeActivite = new HashMap<>();
         VueStage vue = new VueStage();
         while (choix != 100) {
             vue.afficheMenu();
