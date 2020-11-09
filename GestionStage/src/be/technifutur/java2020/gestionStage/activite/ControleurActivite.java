@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 public class ControleurActivite extends AbstractControleur {
 
     public void addActivite(Stage monStage, String name, Activite monActivite) {     //TODO, se baser sur Stage
-        if (monStage.getListeActivite().containsKey(name)) {
+        if (this.contient(monStage.getListeActivite(), name)) {
             System.out.println("L'activité existe déjà");
         }else {
             monStage.addActivite(monActivite);
@@ -82,7 +82,7 @@ public class ControleurActivite extends AbstractControleur {
             }
             if (choix == 3) {
 
-                System.out.println("Quel activité remplacer ?");
+                System.out.println("Quelle activité remplacer ?");
                 Scanner sc4 = new Scanner(System.in);
                 String rempStage = sc4.nextLine();
                 System.out.println("Entre les détails de la nouvelle activité :");

@@ -26,11 +26,24 @@ public class Stage {
     }
 
     public void addActivite(Activite monActivite) {
-        this.listeActivite.put(monActivite.getName(), monActivite);
+        if (!this.dateInZone(monActivite)){
+            System.out.println("L'activité ne respecte pas l'horaire du Stage");
+        }else {
+            this.listeActivite.put(monActivite.getName(), monActivite);
+        }
     }
 
     public void removeActivite(String key) {
         this.listeActivite.remove(key);
+    }
+
+    public boolean dateInZone(Activite monActivite) {
+        boolean ok = false;
+        if ((monActivite.getDateDebut().isAfter(this.getDateDebut())) &&
+                (this.getDetaFin().isAfter(monActivite.getDateDebut().plusMinutes(monActivite.getDuree())))) {
+            ok = true;
+        }
+        return ok;
     }
 
     public String getNom() {

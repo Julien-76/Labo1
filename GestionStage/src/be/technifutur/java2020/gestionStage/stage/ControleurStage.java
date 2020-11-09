@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 public class ControleurStage extends AbstractControleur {
 
     public void addStage(ListeStage maMap, String name, Stage monStage){
-            if (maMap.getListeStage().containsKey(name)) {
+            if (this.contient(maMap.getListeStage(), name)) {
                 System.out.println("Le stage existe déjà");
             }else {
                 maMap.getListeStage().put(name, monStage);
