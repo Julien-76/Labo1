@@ -59,44 +59,4 @@ public class ControleurActivite extends AbstractControleur {
         Activite newActivite = new Activite(addNom, dateDebut, duree);
         return newActivite;
     }
-
-    public static void main(String[] args) {
-        int choix = 0;
-        ControleurActivite control = new ControleurActivite();
-        Stage monStage = new Stage("Tennis", LocalDateTime.of(2020,12,01,8,00), LocalDateTime.of(2020,12,31,17,00));
-        VueActivite vue = new VueActivite();
-        while (choix != 100) {
-            vue.afficheMenu();
-            Scanner sc = new Scanner(System.in);
-            choix = sc.nextInt();
-            if (choix == 1) {
-                Activite activiteAdd = control.createActivite();
-                control.addActivite(monStage, activiteAdd.getName(), activiteAdd);
-            }
-            if (choix == 2) {
-                System.out.println("Quelle activité supprimer ?");
-                Scanner sc3 = new Scanner(System.in);
-                String remActivite = sc3.nextLine();
-                control.removeActivité(monStage, remActivite);
-            }
-            if (choix == 3) {
-
-                System.out.println("Quelle activité remplacer ?");
-                Scanner sc4 = new Scanner(System.in);
-                String rempStage = sc4.nextLine();
-                System.out.println("Entre les détails de la nouvelle activité :");
-                Activite activiteAdd = control.createActivite();
-                control.remplaceActivite(monStage, rempStage, activiteAdd.getName(), activiteAdd);
-            }
-            if (choix == 4) {
-                vue.afficheListe(monStage.getListeActivite());
-            }
-            if (choix == 5) {
-                String activite;
-                System.out.println("De quelle activité veux-tu voir les détails ?");
-                activite = sc.nextLine();
-
-            }
-        }
-    }
 }
