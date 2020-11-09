@@ -5,5 +5,13 @@ import java.util.HashMap;
 
 public class ListeStage {
 
-    HashMap<String, Stage> listeStage;
+   private HashMap<String, Stage> listeStage;
+
+    public HashMap<String, Stage> getListeStage() {
+        return listeStage;
+    }
+
+    public ListeStage () {
+        listeStage = new HashMap<>();
+    }
 }

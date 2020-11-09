@@ -10,6 +10,6 @@ import java.util.Map;
 public class VueStage extends AbstractVue {
 
     public void afficheMenu(){
-        System.out.println("Que veux-tu faire ? \n1. Ajouter Activité\n2. Retirer Activité\n3. Remplacer Activité\n4. Afficher la liste des activités du stage");
+        System.out.println("Que veux-tu faire ? \n1. Ajouter Stage\n2. Retirer Stage\n3. Remplacer Stage\n4. Afficher la liste des Stages");
     }
 }

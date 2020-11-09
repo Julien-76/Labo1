@@ -15,25 +15,25 @@ import java.util.regex.Pattern;
 public class ControleurStage extends AbstractControleur {
 
     public void addStage(ListeStage maMap, String name, Stage monStage){
-            if (maMap.listeStage.containsKey(name)) {
+            if (maMap.getListeStage().containsKey(name)) {
                 System.out.println("Le stage existe déjà");
             }else {
-                maMap.listeStage.put(name, monStage);
+                maMap.getListeStage().put(name, monStage);
                 System.out.println("Le stage " + name + " a bien été ajouté");
             }
     }
 
     public void removeStage(ListeStage maMap, String stageKey) {
-        if (!maMap.listeStage.containsKey(stageKey)) {
+        if (!this.contient(maMap.getListeStage(), stageKey)) {
             System.out.println("Aucun stage correspondant");
         }else {
-        maMap.listeStage.remove(stageKey);
+        maMap.getListeStage().remove(stageKey);
         System.out.println("Le Stage " + stageKey + " a bien été retiré");
         }
     }
 
     public void remplaceStage(ListeStage maMap, String oldKey, String newKey, Stage newStage) {
-        if (!maMap.listeStage.containsKey(oldKey)) {
+        if (!this.contient(maMap.getListeStage(), oldKey)) {
             System.out.println("Le stage à remplacer n'existe pas");
         } else {
             this.removeStage(maMap, oldKey);
@@ -48,7 +48,7 @@ public class ControleurStage extends AbstractControleur {
         LocalDateTime dateDebut = null;
         LocalDateTime dateFin = null;
         do {
-            System.out.println("Date de début ?");
+            System.out.println("Date et heure de début ? (jj/mm/aaaa hh:mm))");
             dateDebut = this.saisieDate();
             System.out.println("Date de fin ?");
             dateFin = this.saisieDate();
@@ -65,7 +65,6 @@ public class ControleurStage extends AbstractControleur {
         int choix = 0;
         ControleurStage control = new ControleurStage();
         ListeStage maliste = new ListeStage();
-        maliste.listeStage = new HashMap<>();
         VueStage vue = new VueStage();
         while (choix != 100) {
             vue.afficheMenu();
@@ -91,7 +90,7 @@ public class ControleurStage extends AbstractControleur {
                 control.remplaceStage(maliste, rempStage, stageAdd.getNom(), stageAdd);
             }
             if (choix == 4) {
-                vue.AfficheListe(maliste.listeStage);
+                vue.AfficheListe(maliste.getListeStage());
             }
         }
     }

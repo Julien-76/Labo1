@@ -20,22 +20,22 @@ public class ControleurActivite extends AbstractControleur {
         if (monStage.getListeActivite().containsKey(name)) {
             System.out.println("L'activité existe déjà");
         }else {
-            monStage.getListeActivite().put(name, monActivite);
+            monStage.addActivite(monActivite);
             System.out.println("L'activité " + name + " a bien été ajoutée");
         }
     }
 
     public void removeActivité(Stage monStage, String activiteKey) {
-        if (!monStage.getListeActivite().containsKey(activiteKey)) {
+        if (!this.contient(monStage.getListeActivite(), activiteKey)) {
             System.out.println("Aucune activité correspondante");
         }else {
-            monStage.getListeActivite().remove(activiteKey);
+            monStage.removeActivite(activiteKey);
             System.out.println("L'activité " + activiteKey + " a bien été retirée");
         }
     }
 
     public void remplaceActivite(Stage monStage, String oldKey, String newKey, Activite newActivite) {
-        if (!monStage.getListeActivite().containsKey(oldKey)) {
+        if (!this.contient(monStage.getListeActivite(), oldKey)) {
             System.out.println("Le stage à remplacer n'existe pas");
         } else {
             this.removeActivité(monStage, oldKey);
@@ -49,7 +49,7 @@ public class ControleurActivite extends AbstractControleur {
         String addNom = sc.nextLine();
         LocalDateTime dateDebut = null;
         do {
-            System.out.println("Date de début ?");
+            System.out.println("Date et heure de début ? (jj/mm/aaaa hh:mm)");
             dateDebut = this.saisieDate();
             if (dateDebut.isBefore(LocalDateTime.now())) {
                 System.out.println("Date antérieure au présent... recommence");
@@ -65,8 +65,7 @@ public class ControleurActivite extends AbstractControleur {
         int choix = 0;
         ControleurActivite control = new ControleurActivite();
         Stage monStage = new Stage("Tennis", LocalDateTime.of(2020,12,01,8,00), LocalDateTime.of(2020,12,31,17,00));
-        monStage.listeActivite = new HashMap<>();
-        VueStage vue = new VueStage();
+        VueActivite vue = new VueActivite();
         while (choix != 100) {
             vue.afficheMenu();
             Scanner sc = new Scanner(System.in);
@@ -92,6 +91,12 @@ public class ControleurActivite extends AbstractControleur {
             }
             if (choix == 4) {
                 vue.AfficheListe(monStage.getListeActivite());
+            }
+            if (choix == 5) {
+                String activite;
+                System.out.println("De quelle activité veux-tu voir les détails ?");
+                activite = sc.nextLine();
+
             }
         }
     }

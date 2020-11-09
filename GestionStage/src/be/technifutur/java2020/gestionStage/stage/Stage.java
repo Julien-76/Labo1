@@ -10,24 +10,27 @@ public class Stage {
     private String nom, txtDebut, txtFin;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
-    public HashMap<String, Activite> listeActivite; //bug introuvable si private
+    private HashMap<String, Activite> listeActivite; //bug introuvable si private
 
-    public static void main(String[] args) {
-        LocalDateTime a = LocalDateTime.of(2020,05,12,16,00);
-        LocalDateTime b = LocalDateTime.of(2020,05,12,16,01);
-        int c = a.compareTo(b);
-        System.out.println(c);
-    }
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
-            this.nom = nom;
-            this.dateDebut = debut;
-            this.dateFin = fin;
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-            String nDebut = debut.format(formatter);
-            String nFIn = fin.format(formatter);
-            this.txtDebut = nDebut;
-            this.txtFin = nFIn;
+        this.nom = nom;
+        this.dateDebut = debut;
+        this.dateFin = fin;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        String nDebut = debut.format(formatter);
+        String nFIn = fin.format(formatter);
+        this.txtDebut = nDebut;
+        this.txtFin = nFIn;
+        listeActivite = new HashMap<>();
+    }
+
+    public void addActivite(Activite monActivite) {
+        this.listeActivite.put(monActivite.getName(), monActivite);
+    }
+
+    public void removeActivite(String key) {
+        this.listeActivite.remove(key);
     }
 
     public String getNom() {

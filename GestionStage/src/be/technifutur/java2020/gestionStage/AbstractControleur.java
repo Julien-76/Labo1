@@ -2,6 +2,7 @@ package be.technifutur.java2020.gestionStage;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -27,11 +28,19 @@ public class AbstractControleur {
 
     public boolean isDateValid(LocalDateTime debut, LocalDateTime fin) {
         boolean ok = false;
-        if (debut.compareTo(fin) > 0 || debut.isBefore(LocalDateTime.now())) {
+        if (fin.isBefore(debut) || debut.isBefore(LocalDateTime.now())) {
             System.out.println("Date invalide (antérieur au début ou au présent");
         } else {
             ok = true;
         }
         return ok;
+    }
+
+    public boolean contient(HashMap maMap, String key) {
+        boolean contain = false;
+        if (maMap.containsKey(key)){
+            contain = true;
+        }
+        return contain;
     }
 }
