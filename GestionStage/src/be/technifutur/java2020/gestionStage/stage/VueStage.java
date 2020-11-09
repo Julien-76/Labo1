@@ -17,10 +17,11 @@ public class VueStage extends AbstractVue {
         System.out.println("Que veux-tu faire ? \n1. Ajouter Stage\n2. Retirer Stage\n3. Remplacer Stage\n4. Afficher la liste des Stages\n5. Entrer dans le menu des Stage");
     }
 
+
+
     public void menuStages(HashMap listStages) {
         int choix = 0;
         String choixStage = "";
-        boolean currentStage = false;
         VueActivite vue = new VueActivite();
         ControleurActivite control = new ControleurActivite();
         System.out.println("Voici les différents Stages : ");
@@ -28,14 +29,10 @@ public class VueStage extends AbstractVue {
         System.out.println("\nDans quel Stage veux-tu travailler ?");
         Scanner sc = new Scanner(System.in);
         choixStage = sc.nextLine();
-        while (!currentStage) {
-            if (!listStages.containsKey(choixStage)) {
+        while (!vue.isStageValid(listStages, choixStage)) {
                 System.out.println("Le Stage n'existe pas");
                 System.out.println("\nDans quel Stage veux-tu travailler ?");
                 choixStage = sc.nextLine();
-            } else {
-                currentStage = true;
-            }
         }
         while (choix != 100) {
             vue.afficheMenu();
@@ -67,7 +64,16 @@ public class VueStage extends AbstractVue {
                 System.out.println("De quelle activité veux-tu voir les détails ?");
                 Scanner sc5 = new Scanner(System.in);
                 activite = sc5.nextLine();
-
+                while (!vue.isStageValid(((Stage) listStages.get(choixStage)).getListeActivite(), activite)) {
+                    System.out.println("L'activité n'existe pas");
+                    System.out.println("De quelle activité veux-tu voir les détails ?");
+                    activite = sc5.nextLine();
+                }
+                System.out.println("L'activité " + activite + " se déroule lors du stage " +
+                        ((Stage) listStages.get(choixStage)).getNom() +
+                        " (du " + ((Stage) listStages.get(choixStage)).getTxtDebut() + " au " + ((Stage) listStages.get(choixStage)).getTxtFin() +
+                        ")\nElle aura lieu du " + ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtDebut() + " au " +
+                        ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtFin());
             }
         }
     }

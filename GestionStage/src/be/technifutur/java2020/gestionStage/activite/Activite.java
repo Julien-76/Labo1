@@ -5,8 +5,8 @@ import java.time.format.DateTimeFormatter;
 
 public class Activite {
 
-    private String name, txtDebut;
-    private LocalDateTime dateDebut;
+    private String name, txtDebut, txtFin;
+    private LocalDateTime dateDebut, dateFin;
     private int duree;  // en minutes
 
     public Activite(String name, LocalDateTime debut, int duree) {
@@ -16,6 +16,9 @@ public class Activite {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         String nDebut = dateDebut.format(formatter);
         this.txtDebut = nDebut;
+        this.dateFin = this.dateDebut.plusMinutes(this.duree);
+        String nFin = dateFin.format(formatter);
+        this.txtFin = nFin;
     }
 
     public String getName() {
@@ -48,5 +51,9 @@ public class Activite {
 
     public void setDateDebut(LocalDateTime dateDebut) {
         this.dateDebut = dateDebut;
+    }
+
+    public String getTxtFin() {
+        return txtFin;
     }
 }
