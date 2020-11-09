@@ -1,16 +1,17 @@
 package be.technifutur.java2020.gestionStage.stage;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 
 public class ListeStage {
 
-   private HashMap<String, Stage> listeStage;
+   private LinkedHashMap<String, Stage> listeStage;
 
     public ListeStage () {
-        listeStage = new HashMap<>();
+        listeStage = new LinkedHashMap<>();
     }
-    public HashMap<String, Stage> getListeStage() {
+    public LinkedHashMap<String, Stage> getListeStage() {
         return listeStage;
     }
 

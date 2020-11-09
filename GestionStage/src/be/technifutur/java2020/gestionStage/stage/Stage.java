@@ -4,13 +4,14 @@ import be.technifutur.java2020.gestionStage.activite.Activite;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class Stage {
 
     private String nom, txtDebut, txtFin;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
-    private HashMap<String, Activite> listeActivite; //bug introuvable si private
+    private LinkedHashMap<String, Activite> listeActivite; //bug introuvable si private
 
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
@@ -22,7 +23,7 @@ public class Stage {
         String nFIn = fin.format(formatter);
         this.txtDebut = nDebut;
         this.txtFin = nFIn;
-        listeActivite = new HashMap<>();
+        listeActivite = new LinkedHashMap<>();
     }
 
     public void addActivite(Activite monActivite) {
@@ -79,7 +80,7 @@ public class Stage {
         return txtFin;
     }
 
-    public HashMap<String, Activite> getListeActivite() {
+    public LinkedHashMap<String, Activite> getListeActivite() {
         return listeActivite;
     }
 }

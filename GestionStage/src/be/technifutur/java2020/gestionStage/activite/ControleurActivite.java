@@ -16,7 +16,7 @@ import java.util.regex.Pattern;
 
 public class ControleurActivite extends AbstractControleur {
 
-    public void addActivite(Stage monStage, String name, Activite monActivite) {     //TODO, se baser sur Stage
+    public void addActivite(Stage monStage, String name, Activite monActivite) {
         if (this.contient(monStage.getListeActivite(), name)) {
             System.out.println("L'activité existe déjà");
         }else {
@@ -89,7 +89,7 @@ public class ControleurActivite extends AbstractControleur {
                 control.remplaceActivite(monStage, rempStage, activiteAdd.getName(), activiteAdd);
             }
             if (choix == 4) {
-                vue.AfficheListe(monStage.getListeActivite());
+                vue.afficheListe(monStage.getListeActivite());
             }
             if (choix == 5) {
                 String activite;

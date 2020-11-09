@@ -3,6 +3,7 @@ package be.technifutur.java2020.gestionStage;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -36,7 +37,7 @@ public class AbstractControleur {
         return ok;
     }
 
-    public boolean contient(HashMap maMap, String key) {
+    public boolean contient(LinkedHashMap maMap, String key) {
         boolean contain = false;
         if (maMap.containsKey(key)){
             contain = true;

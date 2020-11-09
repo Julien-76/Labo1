@@ -5,10 +5,7 @@ import be.technifutur.java2020.gestionStage.activite.Activite;
 import be.technifutur.java2020.gestionStage.activite.ControleurActivite;
 import be.technifutur.java2020.gestionStage.activite.VueActivite;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class VueStage extends AbstractVue {
@@ -19,7 +16,7 @@ public class VueStage extends AbstractVue {
 
 
 
-    public void menuStages(HashMap listStages) {
+    public void menuStages(LinkedHashMap listStages) {
         int choix = 0;
         String choixStage = "";
         VueActivite vue = new VueActivite();

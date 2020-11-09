@@ -90,7 +90,7 @@ public class ControleurStage extends AbstractControleur {
                 control.remplaceStage(maliste, rempStage, stageAdd.getNom(), stageAdd);
             }
             if (choix == 4) {
-                vue.AfficheListe(maliste.getListeStage());
+                vue.afficheListe(maliste.getListeStage());
             }
 
             if (choix == 5) {

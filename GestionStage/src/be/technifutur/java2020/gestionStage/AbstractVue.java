@@ -1,10 +1,11 @@
 package be.technifutur.java2020.gestionStage;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 public class AbstractVue {
 
-    public void afficheListe(HashMap maListe){
+    public void afficheListe(LinkedHashMap maListe){
         System.out.println(maListe.keySet().toString());
     }
 }
