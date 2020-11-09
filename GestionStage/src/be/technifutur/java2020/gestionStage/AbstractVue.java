@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class AbstractVue {
 
-    public void AfficheListe(HashMap maListe){
+    public void afficheListe(HashMap maListe){
         System.out.println(maListe.keySet().toString());
     }
 }

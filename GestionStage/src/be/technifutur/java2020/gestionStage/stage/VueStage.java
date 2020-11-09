@@ -25,7 +25,7 @@ public class VueStage extends AbstractVue {
         VueActivite vue = new VueActivite();
         ControleurActivite control = new ControleurActivite();
         System.out.println("Voici les différents Stages : ");
-        this.AfficheListe(listStages);
+        this.afficheListe(listStages);
         System.out.println("\nDans quel Stage veux-tu travailler ?");
         Scanner sc = new Scanner(System.in);
         choixStage = sc.nextLine();
@@ -57,10 +57,12 @@ public class VueStage extends AbstractVue {
                 control.remplaceActivite((Stage) listStages.get(choixStage), rempStage, activiteAdd.getName(), activiteAdd);
             }
             if (choix == 4) {
-                vue.AfficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
+                vue.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
             }
             if (choix == 5) {
                 String activite;
+                System.out.println("Voici la liste des activités du stage :");
+                this.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
                 System.out.println("De quelle activité veux-tu voir les détails ?");
                 Scanner sc5 = new Scanner(System.in);
                 activite = sc5.nextLine();
