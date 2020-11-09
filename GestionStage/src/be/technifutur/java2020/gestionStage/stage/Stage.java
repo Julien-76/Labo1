@@ -30,6 +30,7 @@ public class Stage {
             System.out.println("L'activité ne respecte pas l'horaire du Stage");
         }else {
             this.listeActivite.put(monActivite.getName(), monActivite);
+            System.out.println("L'activité " + monActivite.getName() + " a bien été ajoutée");
         }
     }
 

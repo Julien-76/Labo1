@@ -21,7 +21,6 @@ public class ControleurActivite extends AbstractControleur {
             System.out.println("L'activité existe déjà");
         }else {
             monStage.addActivite(monActivite);
-            System.out.println("L'activité " + name + " a bien été ajoutée");
         }
     }
 
@@ -36,7 +35,7 @@ public class ControleurActivite extends AbstractControleur {
 
     public void remplaceActivite(Stage monStage, String oldKey, String newKey, Activite newActivite) {
         if (!this.contient(monStage.getListeActivite(), oldKey)) {
-            System.out.println("Le stage à remplacer n'existe pas");
+            System.out.println("L'activité à remplacer n'existe pas");
         } else {
             this.removeActivité(monStage, oldKey);
             this.addActivite(monStage, newKey, newActivite);

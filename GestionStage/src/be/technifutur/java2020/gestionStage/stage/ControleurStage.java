@@ -61,7 +61,7 @@ public class ControleurStage extends AbstractControleur {
 
 
 
-    public static void main(String[] args) {        // manipulation de la liste ok
+    public static void main(String[] args) {
         int choix = 0;
         ControleurStage control = new ControleurStage();
         ListeStage maliste = new ListeStage();
@@ -91,6 +91,10 @@ public class ControleurStage extends AbstractControleur {
             }
             if (choix == 4) {
                 vue.AfficheListe(maliste.getListeStage());
+            }
+
+            if (choix == 5) {
+                vue.menuStages(maliste.getListeStage());
             }
         }
     }
