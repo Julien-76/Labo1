@@ -1,6 +1,7 @@
 package be.technifutur.java2020.gestionStage.activite;
 
 import be.technifutur.java2020.gestionStage.AbstractVue;
+import be.technifutur.java2020.gestionStage.Menu;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -11,7 +12,10 @@ public class VueActivite extends AbstractVue {
 
 
     public void afficheMenu(){
-        System.out.println("Que veux-tu faire ? \n1. Ajouter Activité\n2. Retirer Activité\n3. Remplacer Activité\n4. Afficher la liste des activités du Stage\n5. Afficher les détails d'une activité\n6. Retourner dans le menu principal");
+        System.out.println("Que veux-tu faire ?");
+        Menu menuPrincipal = new Menu();
+        menuPrincipal.menuPrincipal();
+        menuPrincipal.afficheListeValeurs();
     }
 
     public boolean isStageValid(LinkedHashMap maMap, String key) {
