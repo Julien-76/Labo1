@@ -25,7 +25,7 @@ public class Menu {
         this.getListeChoix().put(5, "5. Entrer dans le Menu des Stages");
     }
 
-    public void MenuStage() {
+    public void menuStage() {
         this.getListeChoix().put(1, "1. Ajouter Activité");
         this.getListeChoix().put(2, "2. Retirer Activité");
         this.getListeChoix().put(3, "3. Remplacer Activté");
@@ -41,14 +41,19 @@ public class Menu {
         }
     }
 
-    public boolean contient(LinkedHashMap maMap, String key) {
+    public boolean contient(LinkedHashMap maMap, int key) {
         boolean ok = false;
-        if (listeChoix.containsKey(key)) {
+        if (maMap.containsKey(key)) {
             ok = true;
         }
         return ok;
     }
 
+    public static void main(String[] args) {
+        Menu menu = new Menu();
+        menu.menuStage();
+        menu.afficheListeValeurs();
+    }
 }
 
     //TODO créer une Map et afficher les valeurs sous forme de liste

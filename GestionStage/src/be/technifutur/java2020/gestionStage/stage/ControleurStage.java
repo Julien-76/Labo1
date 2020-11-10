@@ -1,6 +1,7 @@
 package be.technifutur.java2020.gestionStage.stage;
 
 import be.technifutur.java2020.gestionStage.AbstractControleur;
+import be.technifutur.java2020.gestionStage.Menu;
 import be.technifutur.java2020.gestionStage.activite.Activite;
 
 import javax.accessibility.AccessibleTable;
@@ -66,10 +67,16 @@ public class ControleurStage extends AbstractControleur {
         ControleurStage control = new ControleurStage();
         ListeStage maliste = new ListeStage();
         VueStage vue = new VueStage();
+        Menu menuPrincipal = new Menu();
         while (choix != 100) {
-            vue.afficheMenu();
+            vue.afficheMenu(menuPrincipal);
             Scanner sc = new Scanner(System.in);
             choix = sc.nextInt();
+            while (!menuPrincipal.contient(menuPrincipal.getListeChoix(), choix)) {
+                System.out.println("Choix incorrect");
+                vue.afficheMenu(menuPrincipal);
+                choix = sc.nextInt();
+            }
             if (choix == 1) {
                 Stage stageAdd = control.createStage();
                 control.addStage(maliste, stageAdd.getNom(), stageAdd);

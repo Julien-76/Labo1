@@ -1,6 +1,7 @@
 package be.technifutur.java2020.gestionStage.stage;
 
 import be.technifutur.java2020.gestionStage.AbstractVue;
+import be.technifutur.java2020.gestionStage.Menu;
 import be.technifutur.java2020.gestionStage.activite.Activite;
 import be.technifutur.java2020.gestionStage.activite.ControleurActivite;
 import be.technifutur.java2020.gestionStage.activite.VueActivite;
@@ -10,19 +11,27 @@ import java.util.*;
 
 public class VueStage extends AbstractVue {
 
-    public void afficheMenu(){
-        System.out.println("Que veux-tu faire ? \n1. Ajouter Stage\n2. Retirer Stage\n3. Remplacer Stage\n4. Afficher la liste des Stages\n5. Entrer dans le menu des Stage");
+    public void afficheMenu(Menu menuPrincipal){
+        menuPrincipal.menuPrincipal();
+        System.out.println("Que veux-tu faire ?");
+        for (Map.Entry<Integer, String> entry : menuPrincipal.getListeChoix().entrySet()) {
+            String value = entry.getValue();
+            System.out.println(value);
+        }
     }
 
 
 
-    public void menuStages(LinkedHashMap listStages) {
+    public void menuStages(Map<String, Stage> listStages) {
         int choix = 0;
         String choixStage = "";
         VueActivite vue = new VueActivite();
         ControleurActivite control = new ControleurActivite();
         System.out.println("Voici les différents Stages : ");
-        this.afficheListe(listStages);
+        for (Map.Entry<String, Stage> entry : listStages.entrySet()) {
+            String key = entry.getKey();
+            System.out.println(key);
+        }
         System.out.println("\nDans quel Stage veux-tu travailler ?");
         Scanner sc = new Scanner(System.in);
         choixStage = sc.nextLine();
@@ -32,8 +41,14 @@ public class VueStage extends AbstractVue {
                 choixStage = sc.nextLine();
         }
         while (choix != 100) {
-            vue.afficheMenu();
+            Menu menuStage = new Menu();
+            vue.afficheMenu(menuStage);
             choix = sc.nextInt();
+            while (menuStage.contient(menuStage.getListeChoix(), choix)) {
+                System.out.println("Choix incorrect");
+                vue.afficheMenu(menuStage);
+                choix = sc.nextInt();
+            }
             if (choix == 1) {
                 Activite activiteAdd = control.createActivite();
                 control.addActivite((Stage) listStages.get(choixStage), activiteAdd.getName(), activiteAdd);
