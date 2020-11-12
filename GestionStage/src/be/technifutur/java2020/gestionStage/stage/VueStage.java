@@ -21,26 +21,27 @@ public class VueStage extends AbstractVue {
     }
 
     public void detailsStage(ListeStage maListe, String key) {
-        boolean activite = true;
-        if (maListe.getListeStage().isEmpty()) {
-            activite = false;
-        }
+        boolean activite = false;
         if (!maListe.getListeStage().containsKey(key)) {
             System.out.println("Le stage n'existe pas");
         } else {
+            if (maListe.getListeStage().get(key).getListeActivite().isEmpty()) {
+                activite = true;
+            }
             System.out.println("Stage " + key + " du " + maListe.getListeStage().get(key).getTxtDebut()
                     + " au " + maListe.getListeStage().get(key).getTxtFin());
-            System.out.println("Ce stage contient : ");
-            if (!activite) {
+
+            if (activite) {
                 System.out.println("Le Stage ne contient pas d'activité");
             } else {
+                System.out.println("Ce stage contient : ");
                 for (Map.Entry<String, Activite> entry : maListe.getListeStage().get(key).getListeActivite().entrySet()) {
                     String cle = entry.getKey();
                     Activite valeur = entry.getValue();
                     System.out.println("\t- Activité " + cle + "\tle " + maListe.getListeStage().get(key).getListeActivite().get(cle).getTxtDebut()
-                    + " (durée : " + maListe.getListeStage().get(key).getListeActivite().get(cle).getDuree() + " min)");
+                            + " (durée : " + maListe.getListeStage().get(key).getListeActivite().get(cle).getDuree() + " min)");
+                    }
                 }
-            }
         }
         //TODO créer une Map et afficher les valeurs sous forme de liste
     /* for (Map.Entry<String, String> entry : lang.entrySet()) {
@@ -121,6 +122,7 @@ public class VueStage extends AbstractVue {
                 ControleurStage controlS = new ControleurStage();
                 VueStage vueS = new VueStage();
                 controlS.menuPrincipal(controlS, listStages, vueS, menuStage);
+                choix = 100;
             }
         }
     }

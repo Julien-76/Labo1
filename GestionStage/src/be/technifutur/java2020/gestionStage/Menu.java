@@ -24,6 +24,7 @@ public class Menu {
         this.getListeChoix().put(4, "4. Afficher la liste des Stages");
         this.getListeChoix().put(5, "5. Aficher les détails d'un Stage");
         this.getListeChoix().put(6, "6. Entrer dans le Menu des Stages");
+        this.getListeChoix().put(7, "7. Fermer l'application");
     }
 
     public void menuStage() {
@@ -48,12 +49,6 @@ public class Menu {
             ok = true;
         }
         return ok;
-    }
-
-    public static void main(String[] args) {
-        Menu menu = new Menu();
-        menu.menuStage();
-        menu.afficheListeValeurs();
     }
 }
 
