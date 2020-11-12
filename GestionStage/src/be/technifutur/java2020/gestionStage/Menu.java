@@ -22,7 +22,8 @@ public class Menu {
         this.getListeChoix().put(2, "2. Retirer Stage");
         this.getListeChoix().put(3, "3. Remplacer Stage");
         this.getListeChoix().put(4, "4. Afficher la liste des Stages");
-        this.getListeChoix().put(5, "5. Entrer dans le Menu des Stages");
+        this.getListeChoix().put(5, "5. Aficher les détails d'un Stage");
+        this.getListeChoix().put(6, "6. Entrer dans le Menu des Stages");
     }
 
     public void menuStage() {
@@ -56,10 +57,5 @@ public class Menu {
     }
 }
 
-    //TODO créer une Map et afficher les valeurs sous forme de liste
-    /* for (Map.Entry<String, String> entry : lang.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            System.out.println("Clé: " + key + ", Valeur: " + value);
-        } peut être utile */
+
 

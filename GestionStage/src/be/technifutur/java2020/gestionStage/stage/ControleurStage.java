@@ -64,7 +64,7 @@ public class ControleurStage extends AbstractControleur {
     public void menuPrincipal(ControleurStage control, LinkedHashMap<String, Stage> maListe, VueStage vue, Menu menuPrincipal){
         int choix = 0;
         ListeStage maliste = new ListeStage();
-        maListe = maliste.getListeStage();
+        maliste.getListeStage().putAll(maListe);
         while (choix != 100) {
             vue.afficheMenu(menuPrincipal);
             Scanner sc = new Scanner(System.in);
@@ -97,6 +97,15 @@ public class ControleurStage extends AbstractControleur {
             }
 
             if (choix == 5) {
+                System.out.println("Liste des stages :");
+                vue.afficheListe(maliste.getListeStage());
+                System.out.println("De quel stage veux-tu voir les détails ?");
+                Scanner sc5 = new Scanner(System.in);
+                String details = sc5.nextLine();
+                vue.detailsStage(maliste, details);
+            }
+
+            if (choix == 6) {
                 vue.menuStages(maliste.getListeStage());
             }
         }

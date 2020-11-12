@@ -12,6 +12,5 @@ public class main {
         VueStage vue = new VueStage();
         Menu menuPrincipal = new Menu();
         control.menuPrincipal(control, maliste.getListeStage(), vue, menuPrincipal);
-
     }
 }

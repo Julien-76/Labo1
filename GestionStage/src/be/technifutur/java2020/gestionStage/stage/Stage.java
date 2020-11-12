@@ -11,7 +11,7 @@ public class Stage {
     private String nom, txtDebut, txtFin;
     private LocalDateTime dateDebut;
     private LocalDateTime dateFin;
-    private LinkedHashMap<String, Activite> listeActivite; //bug introuvable si private
+    private LinkedHashMap<String, Activite> listeActivite;
 
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
