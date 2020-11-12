@@ -3,15 +3,16 @@ import be.technifutur.java2020.gestionStage.activite.Activite;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 
 public class Stage {
 
-    private String nom, txtDebut, txtFin;
-    private LocalDateTime dateDebut;
-    private LocalDateTime dateFin;
+    private final String nom, txtDebut, txtFin;
+    private final LocalDateTime dateDebut, dateFin;
     private LinkedHashMap<String, Activite> listeActivite;
+    private HashSet<Participant> listeParticipants;
+
 
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
@@ -24,6 +25,7 @@ public class Stage {
         this.txtDebut = nDebut;
         this.txtFin = nFIn;
         listeActivite = new LinkedHashMap<>();
+        listeParticipants = new HashSet<>();
     }
 
     public void addActivite(Activite monActivite) {
@@ -48,12 +50,12 @@ public class Stage {
         return ok;
     }
 
-    public String getNom() {
-        return nom;
+    public void addParticipant(HashSet<Participant> liste, Participant participant) {
+        liste.add(participant);
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public String getNom() {
+        return nom;
     }
 
     public LocalDateTime getDateDebut() {
@@ -62,14 +64,6 @@ public class Stage {
 
     public LocalDateTime getDetaFin() {
         return dateFin;
-    }
-
-    public void setDateDebut(LocalDateTime dateDebut) {
-        this.dateDebut = dateDebut;
-    }
-
-    public void setDateFin(LocalDateTime dateFin) {
-        this.dateFin = dateFin;
     }
 
     public String getTxtDebut() {
@@ -82,5 +76,9 @@ public class Stage {
 
     public LinkedHashMap<String, Activite> getListeActivite() {
         return listeActivite;
+    }
+
+    public HashSet<Participant> getListeParticipants() {
+        return listeParticipants;
     }
 }

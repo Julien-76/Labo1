@@ -3,7 +3,7 @@ package be.technifutur.java2020.gestionStage;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class Menu {
+public class Menu extends AbstractMenu {
 
     private LinkedHashMap<Integer, String> listeChoix;
 
@@ -41,14 +41,6 @@ public class Menu {
             String value = entry.getValue();
             System.out.println(value);
         }
-    }
-
-    public boolean contient(LinkedHashMap maMap, int key) {
-        boolean ok = false;
-        if (maMap.containsKey(key)) {
-            ok = true;
-        }
-        return ok;
     }
 }
 

@@ -1,6 +1,5 @@
 package be.technifutur.java2020.gestionStage;
 
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 public class AbstractVue {

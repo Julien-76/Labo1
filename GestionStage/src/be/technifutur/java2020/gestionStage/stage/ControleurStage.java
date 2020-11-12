@@ -3,15 +3,10 @@ package be.technifutur.java2020.gestionStage.stage;
 import be.technifutur.java2020.gestionStage.AbstractControleur;
 import be.technifutur.java2020.gestionStage.Menu;
 import be.technifutur.java2020.gestionStage.activite.Activite;
-
-import javax.accessibility.AccessibleTable;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 
 public class ControleurStage extends AbstractControleur {
@@ -59,6 +54,19 @@ public class ControleurStage extends AbstractControleur {
         HashMap<String, Activite> maliste = null;
         Stage newStage = new Stage(addNom, dateDebut, dateFin);
         return newStage;
+    }
+
+    public Participant createParticipant() {
+        Participant participant = new Participant();
+        String nom, prenom;
+        System.out.println("Nom ?");
+        Scanner sc = new Scanner(System.in);
+        nom = sc.nextLine();
+        System.out.println("Prémnom ?");
+        prenom = sc.nextLine();
+        participant.setNom(nom);
+        participant.setPrenom(prenom);
+        return participant;
     }
 
     public void menuPrincipal(ControleurStage control, LinkedHashMap<String, Stage> maListe, VueStage vue, Menu menuPrincipal){

@@ -1,10 +1,7 @@
 package be.technifutur.java2020.gestionStage.activite;
-
 import be.technifutur.java2020.gestionStage.AbstractVue;
 import be.technifutur.java2020.gestionStage.Menu;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Scanner;
 

@@ -4,7 +4,7 @@ import be.technifutur.java2020.gestionStage.stage.ControleurStage;
 import be.technifutur.java2020.gestionStage.stage.ListeStage;
 import be.technifutur.java2020.gestionStage.stage.VueStage;
 
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         ControleurStage control = new ControleurStage();

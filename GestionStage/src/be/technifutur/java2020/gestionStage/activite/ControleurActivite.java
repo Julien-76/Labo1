@@ -1,18 +1,9 @@
 package be.technifutur.java2020.gestionStage.activite;
 import be.technifutur.java2020.gestionStage.AbstractControleur;
-import be.technifutur.java2020.gestionStage.stage.ControleurStage;
-import be.technifutur.java2020.gestionStage.stage.ListeStage;
 import be.technifutur.java2020.gestionStage.stage.Stage;
-import be.technifutur.java2020.gestionStage.stage.VueStage;
 
-
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class ControleurActivite extends AbstractControleur {
 

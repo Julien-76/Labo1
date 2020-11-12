@@ -4,7 +4,7 @@ import java.util.LinkedHashMap;
 
 public abstract class AbstractMenu {
 
-    public boolean contient(LinkedHashMap maMap, String key) {
+    public boolean contient(LinkedHashMap maMap, int key) {
         boolean ok = false;
         if (maMap.containsKey(key)) {
             ok = true;
