@@ -8,6 +8,7 @@ import javax.accessibility.AccessibleTable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -60,14 +61,10 @@ public class ControleurStage extends AbstractControleur {
         return newStage;
     }
 
-
-
-    public static void main(String[] args) {
+    public void menuPrincipal(ControleurStage control, LinkedHashMap<String, Stage> maListe, VueStage vue, Menu menuPrincipal){
         int choix = 0;
-        ControleurStage control = new ControleurStage();
         ListeStage maliste = new ListeStage();
-        VueStage vue = new VueStage();
-        Menu menuPrincipal = new Menu();
+        maListe = maliste.getListeStage();
         while (choix != 100) {
             vue.afficheMenu(menuPrincipal);
             Scanner sc = new Scanner(System.in);
@@ -88,7 +85,6 @@ public class ControleurStage extends AbstractControleur {
                 control.removeStage(maliste, remStage);
             }
             if (choix == 3) {
-
                 System.out.println("Quel stage remplacer ?");
                 Scanner sc4 = new Scanner(System.in);
                 String rempStage = sc4.nextLine();
@@ -104,5 +100,16 @@ public class ControleurStage extends AbstractControleur {
                 vue.menuStages(maliste.getListeStage());
             }
         }
+    }
+
+
+
+    public static void main(String[] args) {
+        ControleurStage control = new ControleurStage();
+        ListeStage maliste = new ListeStage();
+        VueStage vue = new VueStage();
+        Menu menuPrincipal = new Menu();
+        control.menuPrincipal(control, maliste.getListeStage(), vue, menuPrincipal);
+
     }
 }

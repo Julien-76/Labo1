@@ -22,7 +22,7 @@ public class VueStage extends AbstractVue {
 
 
 
-    public void menuStages(Map<String, Stage> listStages) {
+    public void menuStages(LinkedHashMap<String, Stage> listStages) {
         int choix = 0;
         String choixStage = "";
         VueActivite vue = new VueActivite();
@@ -44,7 +44,7 @@ public class VueStage extends AbstractVue {
             Menu menuStage = new Menu();
             vue.afficheMenu(menuStage);
             choix = sc.nextInt();
-            while (menuStage.contient(menuStage.getListeChoix(), choix)) {
+            while (!menuStage.contient(menuStage.getListeChoix(), choix)) {
                 System.out.println("Choix incorrect");
                 vue.afficheMenu(menuStage);
                 choix = sc.nextInt();
@@ -88,6 +88,11 @@ public class VueStage extends AbstractVue {
                         " (du " + ((Stage) listStages.get(choixStage)).getTxtDebut() + " au " + ((Stage) listStages.get(choixStage)).getTxtFin() +
                         ")\nElle aura lieu du " + ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtDebut() + " au " +
                         ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtFin());
+            }
+            if (choix == 6) {
+                ControleurStage controlS = new ControleurStage();
+                VueStage vueS = new VueStage();
+                controlS.menuPrincipal(controlS, listStages, vueS, menuStage);
             }
         }
     }
