@@ -101,15 +101,4 @@ public class ControleurStage extends AbstractControleur {
             }
         }
     }
-
-
-
-    public static void main(String[] args) {
-        ControleurStage control = new ControleurStage();
-        ListeStage maliste = new ListeStage();
-        VueStage vue = new VueStage();
-        Menu menuPrincipal = new Menu();
-        control.menuPrincipal(control, maliste.getListeStage(), vue, menuPrincipal);
-
-    }
 }
