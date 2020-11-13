@@ -34,7 +34,8 @@ public class Menu extends AbstractMenu {
         this.getListeChoix().put(3, "3. Remplacer Activté");
         this.getListeChoix().put(4, "4. Afficher la liste des Activités");
         this.getListeChoix().put(5, "5. Afficher les détails d'une Activité");
-        this.getListeChoix().put(6, "6. Revenir au Menu Principal");
+        this.getListeChoix().put(6, "6. Afficher la liste des participants");
+        this.getListeChoix().put(7, "7. Revenir au Menu Principal");
     }
 
     public void afficheListeValeurs() {

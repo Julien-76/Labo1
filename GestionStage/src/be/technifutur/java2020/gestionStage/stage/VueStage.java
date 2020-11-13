@@ -118,7 +118,12 @@ public class VueStage extends AbstractVue {
                         ")\nElle aura lieu du " + ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtDebut() + " au " +
                         ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtFin());
             }
+
             if (choix == 6) {
+                this.afficheParticipants(listStages.get(choixStage));
+            }
+
+            if (choix == 7) {
                 ControleurStage controlS = new ControleurStage();
                 VueStage vueS = new VueStage();
                 controlS.menuPrincipal(controlS, listStages, vueS, menuStage);

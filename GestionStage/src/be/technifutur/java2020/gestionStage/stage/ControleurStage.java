@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 
 public class ControleurStage extends AbstractControleur {
@@ -62,7 +63,7 @@ public class ControleurStage extends AbstractControleur {
         System.out.println("Nom ?");
         Scanner sc = new Scanner(System.in);
         nom = sc.nextLine();
-        System.out.println("Prémnom ?");
+        System.out.println("Prénom ?");
         prenom = sc.nextLine();
         participant.setNom(nom);
         participant.setPrenom(prenom);
@@ -111,10 +112,27 @@ public class ControleurStage extends AbstractControleur {
                 Scanner sc5 = new Scanner(System.in);
                 String details = sc5.nextLine();
                 vue.detailsStage(maliste, details);
+                vue.afficheParticipants(maliste.getListeStage().get(details));
             }
 
             if (choix == 6) {
                 vue.menuStages(maliste.getListeStage());
+            }
+
+            if (choix == 7) {
+                String stage;
+                System.out.println("Voici la liste des Stage :");
+                vue.afficheListe(maliste.getListeStage());
+                System.out.println("À quel stage veux-tu t'inscrire ?");
+                Scanner sc6 = new Scanner(System.in);
+                stage = sc6.nextLine();
+                if (maliste.doublonStage(maliste.getListeStage(), stage)){
+                    System.out.println("Le Stage n'existe pas");
+                } else {
+                    Participant participant = control.createParticipant();
+                    maliste.getListeStage().get(stage).getParticipantsStage().add(participant);
+                    System.out.println(participant.getPrenom() + " " + participant.getNom() + " a bien été inscrit au Stage " + stage);
+                }
             }
         }
     }

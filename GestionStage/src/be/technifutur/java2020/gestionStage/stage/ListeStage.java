@@ -14,5 +14,11 @@ public class ListeStage {
         return listeStage;
     }
 
-
+    public boolean doublonStage(LinkedHashMap maMap, String stage) {
+        boolean doublon = false;
+        if (!maMap.containsKey(stage)) {
+            doublon = true;
+        }
+        return doublon;
+    }
 }

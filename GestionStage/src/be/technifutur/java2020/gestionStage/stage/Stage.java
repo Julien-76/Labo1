@@ -1,11 +1,10 @@
 package be.technifutur.java2020.gestionStage.stage;
+import be.technifutur.java2020.gestionStage.Comparateur;
 import be.technifutur.java2020.gestionStage.activite.Activite;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashSet;
-import java.util.LinkedHashMap;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Stage {
 
@@ -26,7 +25,7 @@ public class Stage {
         this.txtDebut = nDebut;
         this.txtFin = nFIn;
         listeActivite = new LinkedHashMap<>();
-        participantsStage = new TreeSet<>();
+        participantsStage = new TreeSet<Participant>(new Comparateur());
     }
 
     public void addActivite(Activite monActivite) {
@@ -49,10 +48,6 @@ public class Stage {
             ok = true;
         }
         return ok;
-    }
-
-    public void addParticipant(HashSet<Participant> liste, Participant participant) {
-        liste.add(participant);
     }
 
     public String getNom() {
@@ -79,7 +74,7 @@ public class Stage {
         return listeActivite;
     }
 
-    public TreesSet<Participant> participantsStage() {
+    public TreeSet<Participant> getParticipantsStage() {
         return participantsStage;
     }
 }

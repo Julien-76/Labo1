@@ -25,11 +25,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="958aed24-48f4-4c37-8c0f-99da372e7e22" name="Default Changelist" comment="réécriture date pattern et affichage">
+      <change afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/Comparateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/AbstractControleur.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/AbstractControleur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/AbstractVue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/AbstractVue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/Activite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/Activite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/ControleurActivite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/ControleurActivite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/VueActivite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/activite/VueActivite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ControleurStage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ListeStage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/ListeStage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GestionStage/be/technifutur/java2020/gestionStage/stage/Stage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/AbstractVue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/AbstractVue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/Activite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/activite/Activite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ControleurStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/ListeStage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Participant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Participant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/Stage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/VueStage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/be/technifutur/java2020/gestionStage/stage/VueStage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +81,13 @@
       <recent name="be.technifutur.java202.gestionStage.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.main">
-    <configuration name="ControleurActivite" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.activite.ControleurActivite" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="ControleurStage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.stage.ControleurStage" />
       <module name="GestionStage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.activite.*" />
+          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.stage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControleurStage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.stage.ControleurStage" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.Main" />
       <module name="GestionStage" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.stage.*" />
+          <option name="PATTERN" value="be.technifutur.java2020.gestionStage.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,8 +121,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MenuStage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.stage.MenuStage" />
+    <configuration name="Stage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.technifutur.java2020.gestionStage.stage.Stage" />
       <module name="GestionStage" />
       <extension name="coverage">
         <pattern>
@@ -135,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Stage" />
         <item itemvalue="Application.main" />
         <item itemvalue="Application.ControleurStage" />
         <item itemvalue="Application.Menu" />
-        <item itemvalue="Application.MenuStage" />
-        <item itemvalue="Application.ControleurActivite" />
       </list>
     </recent_temporary>
   </component>
@@ -196,6 +210,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="ajout de la classe Stage" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="576" y="193" key="#Inspections" timestamp="1605261715810">
+      <screen x="0" y="0" width="1900" height="1029" />
+    </state>
+    <state x="576" y="193" key="#Inspections/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605261715810" />
     <state x="755" y="215" key="#com.intellij.ide.util.MemberChooser" timestamp="1605190110162">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
@@ -204,26 +222,26 @@
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state x="680" y="261" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605002006967" />
-    <state width="1857" height="343" key="GridCell.Tab.0.bottom" timestamp="1605201891144">
+    <state width="1857" height="205" key="GridCell.Tab.0.bottom" timestamp="1605278574592">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state width="1857" height="274" key="GridCell.Tab.0.bottom/0.0.1584.851@0.0.1584.851" timestamp="1604685526134" />
-    <state width="1857" height="343" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605201891144" />
-    <state width="1857" height="343" key="GridCell.Tab.0.center" timestamp="1605201891135">
+    <state width="1857" height="205" key="GridCell.Tab.0.bottom/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605278574592" />
+    <state width="1857" height="205" key="GridCell.Tab.0.center" timestamp="1605278574591">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state width="1857" height="274" key="GridCell.Tab.0.center/0.0.1584.851@0.0.1584.851" timestamp="1604685526128" />
-    <state width="1857" height="343" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605201891135" />
-    <state width="1857" height="343" key="GridCell.Tab.0.left" timestamp="1605201891135">
+    <state width="1857" height="205" key="GridCell.Tab.0.center/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605278574591" />
+    <state width="1857" height="205" key="GridCell.Tab.0.left" timestamp="1605278574591">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state width="1857" height="274" key="GridCell.Tab.0.left/0.0.1584.851@0.0.1584.851" timestamp="1604685526128" />
-    <state width="1857" height="343" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605201891135" />
-    <state width="1857" height="343" key="GridCell.Tab.0.right" timestamp="1605201891144">
+    <state width="1857" height="205" key="GridCell.Tab.0.left/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605278574591" />
+    <state width="1857" height="205" key="GridCell.Tab.0.right" timestamp="1605278574592">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
     <state width="1857" height="274" key="GridCell.Tab.0.right/0.0.1584.851@0.0.1584.851" timestamp="1604685526134" />
-    <state width="1857" height="343" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605201891144" />
+    <state width="1857" height="205" key="GridCell.Tab.0.right/147.1080.1584.851/0.0.1900.1029@0.0.1900.1029" timestamp="1605278574592" />
     <state width="1857" height="343" key="GridCell.Tab.1.bottom" timestamp="1605201891157">
       <screen x="0" y="0" width="1900" height="1029" />
     </state>
