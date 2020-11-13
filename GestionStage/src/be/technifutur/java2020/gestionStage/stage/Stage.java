@@ -5,13 +5,14 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.TreeSet;
 
 public class Stage {
 
     private final String nom, txtDebut, txtFin;
     private final LocalDateTime dateDebut, dateFin;
     private LinkedHashMap<String, Activite> listeActivite;
-    private HashSet<Participant> listeParticipants;
+    private TreeSet<Participant> participantsStage;
 
 
 
@@ -25,7 +26,7 @@ public class Stage {
         this.txtDebut = nDebut;
         this.txtFin = nFIn;
         listeActivite = new LinkedHashMap<>();
-        listeParticipants = new HashSet<>();
+        participantsStage = new TreeSet<>();
     }
 
     public void addActivite(Activite monActivite) {
@@ -78,7 +79,7 @@ public class Stage {
         return listeActivite;
     }
 
-    public HashSet<Participant> getListeParticipants() {
-        return listeParticipants;
+    public TreesSet<Participant> participantsStage() {
+        return participantsStage;
     }
 }

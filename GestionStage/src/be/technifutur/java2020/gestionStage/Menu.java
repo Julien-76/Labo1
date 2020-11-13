@@ -24,7 +24,8 @@ public class Menu extends AbstractMenu {
         this.getListeChoix().put(4, "4. Afficher la liste des Stages");
         this.getListeChoix().put(5, "5. Aficher les détails d'un Stage");
         this.getListeChoix().put(6, "6. Entrer dans le Menu des Stages");
-        this.getListeChoix().put(7, "7. Fermer l'application");
+        this.getListeChoix().put(7, "7. S'insrire à un Stage");
+        this.getListeChoix().put(8, "8. Fermer l'application");
     }
 
     public void menuStage() {

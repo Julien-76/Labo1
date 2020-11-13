@@ -73,7 +73,7 @@ public class ControleurStage extends AbstractControleur {
         int choix = 0;
         ListeStage maliste = new ListeStage();
         maliste.getListeStage().putAll(maListe);
-        while (choix != 7) {
+        while (choix != 8) {
             vue.afficheMenu(menuPrincipal);
             Scanner sc = new Scanner(System.in);
             choix = sc.nextInt();

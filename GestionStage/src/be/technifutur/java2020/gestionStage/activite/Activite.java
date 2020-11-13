@@ -2,12 +2,14 @@ package be.technifutur.java2020.gestionStage.activite;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.TreeSet;
 
 public class Activite {
 
     private final String name, txtDebut, txtFin;
     private final LocalDateTime dateDebut, dateFin;
     private final int duree;  // en minutes
+    private TreeSet<String> participantsActivite;
 
     public Activite(String name, LocalDateTime debut, int duree) {
         this.name = name;
