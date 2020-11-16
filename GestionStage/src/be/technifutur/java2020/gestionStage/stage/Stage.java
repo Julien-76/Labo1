@@ -14,7 +14,6 @@ public class Stage {
     private TreeSet<Participant> participantsStage;
 
 
-
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
         this.nom = nom;
         this.dateDebut = debut;

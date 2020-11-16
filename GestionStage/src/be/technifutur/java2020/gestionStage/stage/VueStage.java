@@ -56,6 +56,7 @@ public class VueStage extends AbstractVue {
         String choixStage = "";
         VueActivite vue = new VueActivite();
         ControleurActivite control = new ControleurActivite();
+        ControleurStage controlS = new ControleurStage();
         System.out.println("Voici les différents Stages : ");
         for (Map.Entry<String, Stage> entry : listStages.entrySet()) {
             String key = entry.getKey();
@@ -69,8 +70,8 @@ public class VueStage extends AbstractVue {
                 System.out.println("\nDans quel Stage veux-tu travailler ?");
                 choixStage = sc.nextLine();
         }
-        while (choix != 100) {
-            Menu menuStage = new Menu();
+        Menu menuStage = new Menu();
+        while (choix != 8) {
             vue.afficheMenu(menuStage);
             choix = sc.nextInt();
             while (!menuStage.contient(menuStage.getListeChoix(), choix)) {
@@ -102,21 +103,27 @@ public class VueStage extends AbstractVue {
             }
             if (choix == 5) {
                 String activite;
-                System.out.println("Voici la liste des activités du stage :");
-                this.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
-                System.out.println("De quelle activité veux-tu voir les détails ?");
-                Scanner sc5 = new Scanner(System.in);
-                activite = sc5.nextLine();
-                while (!vue.isStageValid(((Stage) listStages.get(choixStage)).getListeActivite(), activite)) {
-                    System.out.println("L'activité n'existe pas");
+                if (listStages.get(choixStage).getListeActivite().isEmpty()){
+                    System.out.println("Il n'y a pas encore d'activité dans ce stage");
+                } else {
+                    System.out.println("Voici la liste des activités du stage :");
+                    this.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
                     System.out.println("De quelle activité veux-tu voir les détails ?");
+                    Scanner sc5 = new Scanner(System.in);
                     activite = sc5.nextLine();
+                    while (!vue.isStageValid(((Stage) listStages.get(choixStage)).getListeActivite(), activite)) {
+                        System.out.println("L'activité n'existe pas");
+                        System.out.println("De quelle activité veux-tu voir les détails ?");
+                        activite = sc5.nextLine();
+                    }
+                    System.out.println("L'activité " + activite + " se déroule lors du stage " +
+                            ((Stage) listStages.get(choixStage)).getNom() +
+                            " (du " + ((Stage) listStages.get(choixStage)).getTxtDebut() + " au " + ((Stage) listStages.get(choixStage)).getTxtFin() +
+                            ")\nElle aura lieu du " + ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtDebut() + " au " +
+                            ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtFin());
+                    System.out.println("\nVoici la liste des inscris à cette activité :");
+                    this.afficheParticipants(listStages.get(choixStage).getListeActivite().get(activite));
                 }
-                System.out.println("L'activité " + activite + " se déroule lors du stage " +
-                        ((Stage) listStages.get(choixStage)).getNom() +
-                        " (du " + ((Stage) listStages.get(choixStage)).getTxtDebut() + " au " + ((Stage) listStages.get(choixStage)).getTxtFin() +
-                        ")\nElle aura lieu du " + ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtDebut() + " au " +
-                        ((Stage) listStages.get(choixStage)).getListeActivite().get(activite).getTxtFin());
             }
 
             if (choix == 6) {
@@ -124,11 +131,50 @@ public class VueStage extends AbstractVue {
             }
 
             if (choix == 7) {
-                ControleurStage controlS = new ControleurStage();
-                VueStage vueS = new VueStage();
-                controlS.menuPrincipal(controlS, listStages, vueS, menuStage);
-                choix = 100;
+                String choixActivite;
+                if (listStages.get(choixStage).getListeActivite().isEmpty()){
+                    System.out.println("Il n'y a pas encore d'activité dans ce stage");
+                } else {
+                    System.out.println("Voici la liste des activités du stage :");
+                    vue.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
+                    System.out.println("\nÀ quelle activité voulez-vous vous inscrire ?");
+                    Scanner sc1 = new Scanner(System.in);
+                    choixActivite = sc1.nextLine();
+                    while (!listStages.get(choixStage).getListeActivite().containsKey(choixActivite)){
+                        System.out.println("Le stage ne contient pas cette activité");
+                        System.out.println("Voici la liste des activités du stage :");
+                        vue.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
+                        System.out.println("\nÀ quelle activité voulez-vous vous inscrire ?");
+                        choixActivite = sc1.nextLine();
+                    }
+                    Participant participant = controlS.createParticipant();
+                    if (!control.contientParticipant(listStages.get(choixStage).getParticipantsStage(), participant)) {
+                        System.out.println("Inscrivez-vous d'abord au Stage avant de vous inscrire à une activité");
+                    } else {
+                        listStages.get(choixStage).getListeActivite().get(choixActivite).getParticipantsActivite().add(participant);
+                    }
+                }
+                System.out.println("Voici la liste des activités du stage :");
+                vue.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
+                System.out.println("\nÀ quelle activité voulez-vous vous inscrire ?");
+                Scanner sc1 = new Scanner(System.in);
+                choixActivite = sc1.nextLine();
+                while (!listStages.get(choixStage).getListeActivite().containsKey(choixActivite)){
+                    System.out.println("Le stage ne contient pas cette activité");
+                    System.out.println("Voici la liste des activités du stage :");
+                    vue.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
+                    System.out.println("\nÀ quelle activité voulez-vous vous inscrire ?");
+                    choixActivite = sc1.nextLine();
+                }
+                Participant participant = controlS.createParticipant();
+                if (!control.contientParticipant(listStages.get(choixStage).getParticipantsStage(), participant)) {
+                    System.out.println("Inscrivez-vous d'abord au Stage avant de vous inscrire à une activité");
+                } else {
+                    listStages.get(choixStage).getListeActivite().get(choixActivite).getParticipantsActivite().add(participant);
+                }
             }
         }
+        VueStage vueS = new VueStage();
+        controlS.menuPrincipal(controlS, listStages, vueS, menuStage);
     }
 }

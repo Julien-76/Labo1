@@ -1,9 +1,11 @@
 package be.technifutur.java2020.gestionStage.activite;
 import be.technifutur.java2020.gestionStage.AbstractControleur;
+import be.technifutur.java2020.gestionStage.stage.Participant;
 import be.technifutur.java2020.gestionStage.stage.Stage;
 
 import java.time.LocalDateTime;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class ControleurActivite extends AbstractControleur {
 
@@ -34,7 +36,7 @@ public class ControleurActivite extends AbstractControleur {
     }
 
     public Activite createActivite() {
-        System.out.println("Qelle activité créer ?");
+        System.out.println("Quelle activité créer ?");
         Scanner sc = new Scanner(System.in);
         String addNom = sc.nextLine();
         LocalDateTime dateDebut = null;
@@ -49,5 +51,13 @@ public class ControleurActivite extends AbstractControleur {
         int duree = sc.nextInt();
         Activite newActivite = new Activite(addNom, dateDebut, duree);
         return newActivite;
+    }
+
+    public boolean contientParticipant(TreeSet<Participant> maListe, Participant participant) {
+        boolean doublon = false;
+        for(Participant p : maListe) {
+            
+        }
+        return doublon;
     }
 }
