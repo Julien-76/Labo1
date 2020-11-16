@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class AbstractControleur {
+public abstract class AbstractControleur {
 
     public LocalDateTime saisieDate(){
         String formatDate = "dd/MM/yyyy HH:mm";
@@ -22,8 +22,7 @@ public class AbstractControleur {
             match = pat.matcher(date);
             valid = match.matches();
         }
-        LocalDateTime maDate = LocalDateTime.parse(date, format);
-        return maDate;
+        return LocalDateTime.parse(date, format);
     }
 
     public boolean isDateValid(LocalDateTime debut, LocalDateTime fin) {

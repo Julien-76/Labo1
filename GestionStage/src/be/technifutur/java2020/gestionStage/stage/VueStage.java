@@ -43,12 +43,6 @@ public class VueStage extends AbstractVue {
                     }
                 }
         }
-        //TODO créer une Map et afficher les valeurs sous forme de liste
-    /* for (Map.Entry<String, String> entry : lang.entrySet()) {
-            String key = entry.getKey();
-            String value = entry.getValue();
-            System.out.println("Clé: " + key + ", Valeur: " + value);
-        } peut être utile */
     }
 
     public void menuStages(LinkedHashMap<String, Stage> listStages) {
@@ -152,25 +146,8 @@ public class VueStage extends AbstractVue {
                         System.out.println("Inscrivez-vous d'abord au Stage avant de vous inscrire à une activité");
                     } else {
                         listStages.get(choixStage).getListeActivite().get(choixActivite).getParticipantsActivite().add(participant);
+                        System.out.println("\n" + participant.getPrenom() + " " + participant.getNom() + " a bien été inscrit pour l'activité " + choixActivite + "\n");
                     }
-                }
-                System.out.println("Voici la liste des activités du stage :");
-                vue.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
-                System.out.println("\nÀ quelle activité voulez-vous vous inscrire ?");
-                Scanner sc1 = new Scanner(System.in);
-                choixActivite = sc1.nextLine();
-                while (!listStages.get(choixStage).getListeActivite().containsKey(choixActivite)){
-                    System.out.println("Le stage ne contient pas cette activité");
-                    System.out.println("Voici la liste des activités du stage :");
-                    vue.afficheListe(((Stage) listStages.get(choixStage)).getListeActivite());
-                    System.out.println("\nÀ quelle activité voulez-vous vous inscrire ?");
-                    choixActivite = sc1.nextLine();
-                }
-                Participant participant = controlS.createParticipant();
-                if (!control.contientParticipant(listStages.get(choixStage).getParticipantsStage(), participant)) {
-                    System.out.println("Inscrivez-vous d'abord au Stage avant de vous inscrire à une activité");
-                } else {
-                    listStages.get(choixStage).getListeActivite().get(choixActivite).getParticipantsActivite().add(participant);
                 }
             }
         }

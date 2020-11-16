@@ -49,14 +49,15 @@ public class ControleurActivite extends AbstractControleur {
         }while (dateDebut.isBefore(LocalDateTime.now()));
         System.out.println("Combien de temps va durer l'activité ? (en minutes) ");
         int duree = sc.nextInt();
-        Activite newActivite = new Activite(addNom, dateDebut, duree);
-        return newActivite;
+        return new Activite(addNom, dateDebut, duree);
     }
 
     public boolean contientParticipant(TreeSet<Participant> maListe, Participant participant) {
         boolean doublon = false;
         for(Participant p : maListe) {
-            
+            if (p.getNom().equals(participant.getNom()) && p.getPrenom().equals(participant.getPrenom())){
+                doublon = true;
+            }
         }
         return doublon;
     }

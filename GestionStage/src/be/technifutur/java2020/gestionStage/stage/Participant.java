@@ -1,7 +1,4 @@
 package be.technifutur.java2020.gestionStage.stage;
-import be.technifutur.java2020.gestionStage.AbstractControleur;
-import be.technifutur.java2020.gestionStage.Menu;
-import be.technifutur.java2020.gestionStage.activite.Activite;
 
 
 public class Participant {

@@ -2,12 +2,9 @@ package be.technifutur.java2020.gestionStage.stage;
 
 import be.technifutur.java2020.gestionStage.AbstractControleur;
 import be.technifutur.java2020.gestionStage.Menu;
-import be.technifutur.java2020.gestionStage.activite.Activite;
 import java.time.LocalDateTime;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
-import java.util.TreeSet;
 
 
 public class ControleurStage extends AbstractControleur {
@@ -43,8 +40,8 @@ public class ControleurStage extends AbstractControleur {
         System.out.println("Quel nom de stage ?");
         Scanner sc = new Scanner(System.in);
         String addNom = sc.nextLine();
-        LocalDateTime dateDebut = null;
-        LocalDateTime dateFin = null;
+        LocalDateTime dateDebut;
+        LocalDateTime dateFin;
         do {
             System.out.println("Date et heure de début ? (jj/mm/aaaa hh:mm))");
             dateDebut = this.saisieDate();
@@ -52,9 +49,7 @@ public class ControleurStage extends AbstractControleur {
             dateFin = this.saisieDate();
             this.isDateValid(dateDebut, dateFin);
         }while (!this.isDateValid(dateDebut, dateFin));
-        HashMap<String, Activite> maliste = null;
-        Stage newStage = new Stage(addNom, dateDebut, dateFin);
-        return newStage;
+        return new Stage(addNom, dateDebut, dateFin);
     }
 
     public Participant createParticipant() {
@@ -116,7 +111,11 @@ public class ControleurStage extends AbstractControleur {
             }
 
             if (choix == 6) {
-                vue.menuStages(maliste.getListeStage());
+                if (maliste.getListeStage().isEmpty()) {
+                    System.out.println("Il n'y a pas encore de Stages");
+                } else {
+                    vue.menuStages(maliste.getListeStage());
+                }
             }
 
             if (choix == 7) {

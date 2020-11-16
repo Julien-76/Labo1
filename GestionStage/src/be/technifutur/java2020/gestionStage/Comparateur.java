@@ -1,5 +1,4 @@
 package be.technifutur.java2020.gestionStage;
-
 import be.technifutur.java2020.gestionStage.stage.Participant;
 
 import java.util.Comparator;

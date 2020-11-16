@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class Menu extends AbstractMenu {
 
-    private LinkedHashMap<Integer, String> listeChoix;
+    private final LinkedHashMap<Integer, String> listeChoix;
 
 
     public Menu() {

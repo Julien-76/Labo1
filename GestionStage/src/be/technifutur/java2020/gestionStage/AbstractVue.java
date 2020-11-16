@@ -1,14 +1,12 @@
 package be.technifutur.java2020.gestionStage;
 
 import be.technifutur.java2020.gestionStage.activite.Activite;
-import be.technifutur.java2020.gestionStage.stage.ListeStage;
 import be.technifutur.java2020.gestionStage.stage.Participant;
 import be.technifutur.java2020.gestionStage.stage.Stage;
 
 import java.util.LinkedHashMap;
-import java.util.TreeSet;
 
-public class AbstractVue {
+public abstract class AbstractVue {
 
     public void afficheListe(LinkedHashMap maListe){
 
@@ -30,7 +28,6 @@ public class AbstractVue {
         if (activite.getParticipantsActivite().isEmpty()) {
             System.out.println("L'activité ne contient pas de participants");
         } else {
-            System.out.println("Voici la liste des participants : \n");
             for (Participant s : activite.getParticipantsActivite()) {
                 System.out.println("\t- " + s.getNom()+ " " + s.getPrenom());
             }
@@ -39,6 +36,3 @@ public class AbstractVue {
 
     }
 }
-
-
-//System.out.println(maListe.keySet().toString());

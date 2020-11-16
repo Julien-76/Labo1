@@ -10,8 +10,8 @@ public class Stage {
 
     private final String nom, txtDebut, txtFin;
     private final LocalDateTime dateDebut, dateFin;
-    private LinkedHashMap<String, Activite> listeActivite;
-    private TreeSet<Participant> participantsStage;
+    private final LinkedHashMap<String, Activite> listeActivite;
+    private final TreeSet<Participant> participantsStage;
 
 
     public Stage (String nom, LocalDateTime debut, LocalDateTime fin) {
